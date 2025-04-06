@@ -1,27 +1,21 @@
 /*CSS Reset*/
 
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-html, body {
-  height: 100%;
-}
-
 body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
+  font-family: arial;
+  font-size: 1rem;
+  color: #fff;
+  background: #000;
   display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-size: 1em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 img, picture, video, canvas, svg {
@@ -53,12 +47,7 @@ a:active {
   text-decoration: none;
 }
 
-/*Main Content*/
-
-body {
-  background: black;
-  font-family: arial;
-}
+/*Helper Class*/
 
 .container {
   max-width: 120rem;
@@ -66,16 +55,10 @@ body {
   padding: 0 2rem;
 }
 
-.mainContent {
-  display: flex;
-  flex-direction: column;
-}
+/*Main Header*/
 
 .mainHeader {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 2.5rem;
+  padding: 2.5rem 0;
 }
 
 .mainLogo {
@@ -84,32 +67,46 @@ body {
 
 .mainNav {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  gap: 2.5rem
 }
 
-.navMenu {
+.mainNavMenu {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 2rem;
 }
 
-.navLink:link {
+.mainNavItemLink:link {
   font-size: 2rem;
-  color: #fff;
 }
 
-.status {
-  text-align: center;
-  margin-top: 2.5rem;
+/*Main Content*/
+
+.section {
+  padding-bottom: 2.5rem;
 }
 
-.statusLink {
+.sectionContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.actionList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.actionItem {
+  display: flex;
+}
+
+.actionItemLink {
   border: 1px solid #fff;
   border-radius: 2rem;
   padding: 1rem 2rem;
-}
-
-.mainFooter {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
 }
