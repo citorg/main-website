@@ -1,0 +1,116 @@
+/*CSS Reset*/
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-size: 1em;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+ol, ul, li, i {
+  list-style-type: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: #fff;
+  text-decoration: none;
+}
+
+/*Main Content*/
+
+body {
+  background: black;
+  overflow: hidden;
+  font-family: arial;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.mainHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.mainLogo {
+  width: 500px;
+}
+
+.mainNav {
+  display: flex;
+  justify-content: center;
+}
+
+.navMenu {
+  display: flex;
+  gap: 2rem;
+}
+
+.navLink:link {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.status {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.statusLink {
+  border: 1px solid #fff;
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+}
+
+.mainFooter {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
