@@ -420,9 +420,6 @@ h5 {
 }
 
 @media (max-width: 790px) {
-  html {
-    font-size: 1.4rem;
-  }
 
   .main-nav {
     flex-direction: column;
@@ -463,9 +460,6 @@ h5 {
 }
 
 @media (max-width: 480px) {
-  html {
-    font-size: 1.3rem;
-  }
 
   .main-nav-menu {
     flex-direction: column;
