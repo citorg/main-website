@@ -209,12 +209,19 @@ h5 {
   gap: 6rem;
 }
 
+.get-involved .card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .get-involved .card-content {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   gap: 2rem;
-  justify-content: center;
 }
+
 
 .get-involved .icon {
   font-size: 4.209rem;
@@ -222,15 +229,20 @@ h5 {
 }
 
 .get-involved .card-text-box {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 2rem;
 }
 
 .get-involved .card-text {
   text-align: center;
+}
+
+.get-involved .action-list {
+  margin-top: auto;
 }
 
 /* Sponsors Section */
