@@ -6,7 +6,7 @@
 }
 
 html {
-  font-size: 10px;
+  font-size: 16px;
     scroll-behavior: smooth;
 }
 
@@ -421,7 +421,7 @@ h5 {
 
 @media (max-width: 790px) {
   html {
-    font-size: 9px;
+    font-size: 14px;
   }
 
   .main-nav {
@@ -464,7 +464,7 @@ h5 {
 
 @media (max-width: 480px) {
   html {
-    font-size: 8px;
+    font-size: 13px;
   }
 
   .main-nav-menu {
