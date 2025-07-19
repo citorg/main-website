@@ -477,6 +477,20 @@ h3 {
     font-size: 1.4rem;
     padding: 1.5rem 3rem;
   }
+
+  .section.about, 
+  .section.get-involved, 
+  .section.sponsors, 
+  .section.contact {
+    padding: 6rem 0;
+  }
+
+  .about .section-header,
+  .get-involved .section-header,
+  .sponsors .section-header,
+  .contact .section-header {
+    margin-bottom: 6rem;
+  }
 }
 
 @media (max-width: 480px) {
