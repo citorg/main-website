@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const hamburger = document.querySelector(".hamburger");
+  const mobile = document.querySelector(".mobile");
   const menu = document.querySelector(".main-nav-menu");
 
-  hamburger.addEventListener("click", () => {
+  mobile.addEventListener("click", () => {
     menu.classList.toggle("open");
   });
 });
