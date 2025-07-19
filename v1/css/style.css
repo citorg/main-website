@@ -405,7 +405,7 @@ h3 {
     flex-direction: column;
     background-color: #000;
     display: none;
-    gap: 2rem;
+    gap: 4rem;
     padding: 2rem;
   }
 
@@ -474,7 +474,6 @@ h3 {
   }
 
   .btn {
-    font-size: 1.4rem;
     padding: 1.5rem 3rem;
   }
 
@@ -497,7 +496,6 @@ h3 {
 
   .main-nav-menu {
     flex-direction: column;
-    gap: 2rem;
   }
 
   .hero .section-heading {
