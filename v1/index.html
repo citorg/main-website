@@ -349,7 +349,16 @@
                 ></textarea>
               </div>
             </div>
-
+            <!-- Inline thank-you message (hidden by default) -->
+            <div
+              id="thankYouMessage"
+              class="thank-you"
+              role="status"
+              style="display: none; color: #111; margin-top: 1rem"
+            >
+              Thanks for reaching out! A member of our team will follow up with
+              you soon.
+            </div>
             <!-- Inline error message -->
             <div id="formError" class="form-error" role="alert"></div>
 
@@ -363,29 +372,6 @@
         <p>© 2025 Christians in Tech. All rights reserved.</p>
       </div>
     </footer>
-    <div
-      id="thankYouModal"
-      class="modal"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="thankYouTitle"
-    >
-      <div class="modal-content">
-        <h2 id="thankYouTitle" class="sr-only">Thank you</h2>
-        <button
-          type="button"
-          class="close-button"
-          id="closeModal"
-          aria-label="Close dialog"
-        >
-          &times;
-        </button>
-        <p>
-          Thanks for reaching out! A member of our team will follow up with you
-          soon.
-        </p>
-      </div>
-    </div>
     <script src="js/menu.js"></script>
     <script src="js/contact.js"></script>
   </body>
