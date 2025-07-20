@@ -3,18 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="CIT is a community at the intersection of Faith and Technology. 
+      Our meetups are designed to spark meaningful conversations, promote knowledge sharing, 
+      and encourage growth—both in your career and your spiritual walk with God."
+    />
+    <meta property="og:title" content="Christians in Tech" />
+    <meta
+      property="og:description"
+      content="CIT is a community at the intersection of Faith and Technology. 
+      Our meetups are designed to spark meaningful conversations, promote knowledge sharing, 
+      and encourage growth—both in your career and your spiritual walk with God."
+    />
+    <meta
+      property="og:image"
+      content="https://christians-in-tech.org/images/og-image.png"
+    />
+    <meta property="og:url" content="https://christians-in-tech.org/" />
+    <meta name="twitter:card" content="summary_large_image" />
+
     <title>Christians in Tech</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="./css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <header class="main-header">
@@ -28,7 +52,12 @@
               />
             </a>
           </div>
-          <button class="mobile" aria-label="Toggle navigation">
+          <button
+            type="button"
+            class="mobile"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+          >
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
@@ -55,255 +84,308 @@
         </ul>
       </nav>
     </header>
-    <section class="section hero">
-      <div class="section-content container">
-        <header class="section-header">
-          <h1 class="section-heading">Christians <span>in</span> Tech</h1>
-          <span class="section-heading-subtitle">
-            A community at the intersection of Faith and Technology.
-          </span>
-        </header>
-        <ul class="action-list">
-          <li class="action-list-item">
+    <main class="main-content">
+      <section class="section hero">
+        <div class="section-content container">
+          <header class="section-header">
+            <h1 class="section-heading">Christians <span>in</span> Tech</h1>
+            <span class="section-heading-subtitle">
+              A community at the intersection of Faith and Technology.
+            </span>
+          </header>
+          <ul class="action-list">
+            <li class="action-list-item">
+              <a
+                href="https://www.meetup.com/citcbus/"
+                class="action-list-item-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Upcoming Events
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="section about" id="about">
+        <div class="section-content container">
+          <header class="section-header">
+            <h2 class="section-heading">About Us</h2>
+          </header>
+          <div class="cards">
+            <article class="card">
+              <div class="card-media">
+                <img
+                  src="https://secure.meetupstatic.com/photos/event/4/7/6/c/highres_525918284.webp"
+                  alt="Photo of Christians in Tech - Columbus Meetup #2 at Bethel World Prayer Center."
+                />
+              </div>
+              <div class="card-text-box">
+                <div class="text-wrapper">
+                  <p class="card-text">
+                    Christians in Tech is a community at the intersection of
+                    faith and technology. Our meetups are designed to spark
+                    meaningful conversations, promote knowledge sharing, and
+                    encourage growth—both in your career and your spiritual walk
+                    with God. Whether you're an experienced professional or just
+                    starting your tech journey, CIT welcomes you.
+                  </p>
+                </div>
+                <ul class="action-list">
+                  <li class="action-list-item">
+                    <a
+                      href="https://www.meetup.com/pro/cit-columbus/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="action-list-item-link"
+                      >Join a Chapter</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section get-involved" id="getInvolved">
+        <div class="section-content container">
+          <header class="section-header">
+            <h2 class="section-heading">Get Involved</h2>
+          </header>
+          <div class="cards">
+            <article class="card">
+              <div class="card-content">
+                <i class="icon fa-brands fa-discord"></i>
+                <div class="card-text-box">
+                  <header class="card-header">
+                    <h3 class="card-heading">Join our Discord</h3>
+                  </header>
+                  <p class="card-text">
+                    Join the conversation on Discord. Connect with others in
+                    tech, share ideas, and stay in the loop with events,
+                    updates, and projects.
+                  </p>
+                  <ul class="action-list">
+                    <li class="action-list-item">
+                      <a
+                        href="https://discord.com/invite/s9bQZBVduF"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="action-list-item-link"
+                        >Join</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-content">
+                <i class="icon fa-solid fa-users"></i>
+                <div class="card-text-box">
+                  <header class="card-header">
+                    <h3 class="card-heading">Start a Chapter</h3>
+                  </header>
+                  <p class="card-text">
+                    Lead a local CIT chapter in your city. Bring Christians in
+                    tech together to build relationships, share ideas, and grow
+                    lasting community.
+                  </p>
+                  <ul class="action-list">
+                    <li class="action-list-item">
+                      <a href="#" class="action-list-item-link">Coming Soon</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-content">
+                <i class="icon fa-solid fa-hand-holding-dollar"></i>
+                <div class="card-text-box">
+                  <header class="card-header">
+                    <h3 class="card-heading">Make a Donation</h3>
+                  </header>
+                  <p class="card-text">
+                    Help us create welcoming spaces—like meetups, workshops, and
+                    hackathons, where faith and tech come together.
+                  </p>
+                  <ul class="action-list">
+                    <li class="action-list-item">
+                      <a
+                        href="https://onrealm.org/bwpc/-/form/give/cit"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="action-list-item-link"
+                        >Donate</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section sponsors" id="sponsors">
+        <div class="section-content container">
+          <header class="section-header">
+            <h2 class="section-heading">Sponsors & Partners</h2>
+          </header>
+          <div class="cards">
             <a
-              href="https://www.meetup.com/citcbus/"
-              class="action-list-item-link"
+              class="card"
+              href="https://www.bethelworldprayercenter.org/"
               target="_blank"
+              rel="noopener noreferrer"
             >
-              Upcoming Events
+              <div class="card-media">
+                <img
+                  src="https://www.bethelworldprayercenter.org/hp_wordpress/wp-content/uploads/2016/04/BWPC_0416LOGO_CUTOUT-WHITE-B-1_logo.png"
+                  alt="Bethel World Prayer Center Logo"
+                  loading="lazy"
+                />
+              </div>
             </a>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section class="section about" id="about">
-      <div class="section-content container">
-        <header class="section-header">
-          <h2 class="section-heading">About Us</h2>
-        </header>
-        <div class="cards">
-          <article class="card">
-            <div class="card-media">
-              <img
-                src="https://secure.meetupstatic.com/photos/event/4/7/6/c/highres_525918284.webp"
-                alt="Photo of Christians in Tech - Columbus Meetup #2 at Bethel World Prayer Center."
-              />
-            </div>
-            <div class="card-text-box">
-              <div class="text-wrapper">
-                <p class="card-text">
-                  Christians in Tech is a community at the intersection of faith
-                  and technology. Our meetups are designed to spark meaningful
-                  conversations, promote knowledge sharing, and encourage
-                  growth—both in your career and your spiritual walk with God.
-                  Whether you're an experienced professional or just starting
-                  your tech journey, CIT welcomes you.
-                </p>
+            <a
+              class="card"
+              href="https://www.improving.com/locations/columbus/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="card-media">
+                <img
+                  src="https://cbuscodeandcoffee.com/img/improving-logo.png"
+                  alt="Improving Columbus Logo"
+                  loading="lazy"
+                />
               </div>
-              <ul class="action-list">
-                <li class="action-list-item">
-                  <a
-                    href="https://www.meetup.com/pro/cit-columbus/"
-                    target="_blank"
-                    class="action-list-item-link"
-                    >Join a Chapter</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </article>
+            </a>
+            <a
+              class="card"
+              href="https://www.fruitsandroots.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="card-media">
+                <img
+                  src="https://b72dd56ca0a27d895808.cdn6.editmysite.com/uploads/b/b72dd56ca0a27d89580869a7c818df6313cb0c46056097a5fc9cecf2f2017b9a/Shirt%20Designs%20(10%20%C3%97%206%20in)2_1659185276.png?width=2400&optimize=medium"
+                  alt="Fruits and Roots Coffee Roasters Logo"
+                  loading="lazy"
+                />
+              </div>
+            </a>
+          </div>
         </div>
-      </div>
-    </section>
-    <section class="section get-involved" id="getInvolved">
-      <div class="section-content container">
-        <header class="section-header">
-          <h2 class="section-heading">Get Involved</h2>
-        </header>
-        <div class="cards">
-          <article class="card">
-            <div class="card-content">
-              <i class="icon fa-brands fa-discord"></i>
-              <div class="card-text-box">
-                <header class="card-header">
-                  <h3 class="card-heading">Join our Discord</h3>
-                </header>
-                <p class="card-text">
-                  Join the conversation on Discord. Connect with others in tech,
-                  share ideas, and stay in the loop with events, updates, and
-                  projects.
-                </p>
-                <ul class="action-list">
-                  <li class="action-list-item">
-                    <a
-                      href="https://discord.com/invite/s9bQZBVduF"
-                      target="_blank"
-                      class="action-list-item-link"
-                      >Join</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </article>
-          <article class="card">
-            <div class="card-content">
-              <i class="icon fa-solid fa-users"></i>
-              <div class="card-text-box">
-                <header class="card-header">
-                  <h3 class="card-heading">Start a Chapter</h3>
-                </header>
-                <p class="card-text">
-                  Lead a local CIT chapter in your city. Bring Christians in
-                  tech together to build relationships, share ideas, and grow
-                  lasting community.
-                </p>
-                <ul class="action-list">
-                  <li class="action-list-item">
-                    <a href="#" class="action-list-item-link">Coming Soon</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </article>
-          <article class="card">
-            <div class="card-content">
-              <i class="icon fa-solid fa-hand-holding-dollar"></i>
-              <div class="card-text-box">
-                <header class="card-header">
-                  <h3 class="card-heading">Make a Donation</h3>
-                </header>
-                <p class="card-text">
-                  Help us create welcoming spaces—like meetups, workshops, and
-                  hackathons, where faith and tech come together.
-                </p>
-                <ul class="action-list">
-                  <li class="action-list-item">
-                    <a
-                      href="https://onrealm.org/bwpc/-/form/give/cit"
-                      target="_blank"
-                      class="action-list-item-link"
-                      >Donate</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-    <section class="section sponsors" id="sponsors">
-      <div class="section-content container">
-        <header class="section-header">
-          <h2 class="section-heading">Sponsors & Partners</h2>
-        </header>
-        <div class="cards">
-          <a
-            class="card"
-            href="https://www.bethelworldprayercenter.org/"
-            target="_blank"
-            rel="noopener noreferrer"
+      </section>
+      <section class="section contact" id="contact">
+        <div class="section-content container">
+          <header class="section-header">
+            <h2 class="section-heading">Contact Us</h2>
+          </header>
+          <form
+            class="contact-form"
+            id="contactForm"
+            action="php/send-message.php"
+            method="POST"
           >
-            <div class="card-media">
-              <img
-                src="https://www.bethelworldprayercenter.org/hp_wordpress/wp-content/uploads/2016/04/BWPC_0416LOGO_CUTOUT-WHITE-B-1_logo.png"
-                alt=""
-              />
-            </div>
-          </a>
-          <a
-            class="card"
-            href="https://www.improving.com/locations/columbus/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div class="card-media">
-              <img
-                src="https://cbuscodeandcoffee.com/img/improving-logo.png"
-                alt=""
-              />
-            </div>
-          </a>
-          <a
-            class="card"
-            href="https://www.fruitsandroots.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div class="card-media">
-              <img
-                src="https://b72dd56ca0a27d895808.cdn6.editmysite.com/uploads/b/b72dd56ca0a27d89580869a7c818df6313cb0c46056097a5fc9cecf2f2017b9a/Shirt%20Designs%20(10%20%C3%97%206%20in)2_1659185276.png?width=2400&optimize=medium"
-                alt=""
-              />
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-    <section class="section contact" id="contact">
-      <div class="section-content container">
-        <header class="section-header">
-          <h2 class="section-heading">Contact Us</h2>
-        </header>
-
-        <form
-          class="contact-form"
-          id="contactForm"
-          action="php/send-message.php"
-          method="POST"
-        >
-          <fieldset class="contact-form-info-box">
-            <fieldset class="contact-form-info">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" required />
-            </fieldset>
-            <fieldset class="contact-form-info">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required />
-            </fieldset>
-          </fieldset>
-
-          <fieldset class="contact-form-info-box">
-            <fieldset class="contact-form-info">
-              <label for="subject">Subject</label>
+            <!-- Honeypot: real users won’t see or fill this -->
+            <div style="display: none">
+              <label for="website">Website</label>
               <input
                 type="text"
-                id="subject"
-                name="subject"
-                maxlength="100"
-                required
+                name="website"
+                id="website"
+                autocomplete="off"
+                tabindex="-1"
               />
-            </fieldset>
-          </fieldset>
+            </div>
 
-          <fieldset class="contact-form-info-box">
-            <fieldset class="contact-form-info">
-              <label for="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                cols="30"
-                rows="10"
-                maxlength="1000"
-                required
-              ></textarea>
-            </fieldset>
-          </fieldset>
+            <div class="contact-form-info-box">
+              <div class="contact-form-info">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  autocomplete="name"
+                />
+              </div>
+              <div class="contact-form-info">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  autocomplete="email"
+                />
+              </div>
+            </div>
 
-          <button type="submit" class="btn">Send Message</button>
-          <p id="thankYouMessage" style="display: none; margin-top: 1rem">
-            Thank you for your message! Someone from our team will respond
-            shortly.
-          </p>
-        </form>
-      </div>
-    </section>
+            <div class="contact-form-info-box">
+              <div class="contact-form-info">
+                <label for="subject">Subject</label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  maxlength="100"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="contact-form-info-box">
+              <div class="contact-form-info">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="10"
+                  maxlength="1000"
+                  required
+                ></textarea>
+              </div>
+            </div>
+
+            <!-- Inline error message -->
+            <div id="formError" class="form-error" role="alert"></div>
+
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+      </section>
+    </main>
     <footer class="main-footer">
       <div class="footer-content">
         <p>© 2025 Christians in Tech. All rights reserved.</p>
       </div>
     </footer>
+    <div
+      id="thankYouModal"
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="thankYouTitle"
+    >
+      <div class="modal-content">
+        <h2 id="thankYouTitle" class="sr-only">Thank you</h2>
+        <button
+          type="button"
+          class="close-button"
+          id="closeModal"
+          aria-label="Close dialog"
+        >
+          &times;
+        </button>
+        <p>
+          Thanks for reaching out! A member of our team will follow up with you
+          soon.
+        </p>
+      </div>
+    </div>
     <script src="js/menu.js"></script>
     <script src="js/contact.js"></script>
   </body>
