@@ -6,24 +6,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!form || !thankYou || !formError || !submitBtn) return;
 
-  const RECAPTCHA_MSG = 'Please complete the CAPTCHA.';
+  const hide = el => el.setAttribute('hidden', '');
+  const show = el => el.removeAttribute('hidden');
+
+  // Ensure hidden on load
+  hide(thankYou);
+  hide(formError);
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    // Hide previous messages
-    formError.style.display = 'none';
-    formError.textContent   = '';
-    thankYou.style.display  = 'none';
+    hide(formError);
+    hide(thankYou);
 
-    // Client-side captcha check (still verify on server!)
+    // Client-side CAPTCHA check (server still validates)
     if (typeof grecaptcha !== 'undefined' && grecaptcha.getResponse().length === 0) {
-      formError.textContent   = RECAPTCHA_MSG;
-      formError.style.display = 'block';
+      formError.textContent = 'Please complete the CAPTCHA.';
+      show(formError);
       return;
     }
 
-    // Disable button & show loading state
     setLoading(true);
 
     try {
@@ -31,32 +33,23 @@ document.addEventListener('DOMContentLoaded', () => {
         method: 'POST',
         body: new FormData(form)
       });
-
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
-      // Expect JSON, but be defensive
-      let data;
-      try {
-        data = await res.json();
-      } catch {
-        throw new Error('Invalid JSON from server.');
-      }
+      const data = await res.json();
 
       if (data.status === 'success') {
         form.reset();
-        // Reset captcha for another submission
         if (typeof grecaptcha !== 'undefined') grecaptcha.reset();
-        thankYou.style.display = 'block';
+        show(thankYou);
       } else {
-        formError.textContent   = data.message || 'An error occurred.';
-        formError.style.display = 'block';
-        // If captcha failed server-side, reset it
+        formError.textContent = data.message || 'An error occurred.';
+        show(formError);
         if (typeof grecaptcha !== 'undefined') grecaptcha.reset();
       }
     } catch (err) {
       console.error(err);
-      formError.textContent   = 'There was a problem sending your message.';
-      formError.style.display = 'block';
+      formError.textContent = 'There was a problem sending your message.';
+      show(formError);
       if (typeof grecaptcha !== 'undefined') grecaptcha.reset();
     } finally {
       setLoading(false);
@@ -64,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   function setLoading(isLoading) {
-    submitBtn.disabled   = isLoading;
+    submitBtn.disabled    = isLoading;
     submitBtn.textContent = isLoading ? 'Sending…' : 'Send Message';
   }
 });
