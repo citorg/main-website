@@ -78,9 +78,6 @@
               Sponsors & Partners
             </a>
           </li>
-          <li class="main-nav-menu-item">
-            <a href="#contact" class="main-nav-menu-item-link"> Contact </a>
-          </li>
         </ul>
       </nav>
     </header>
@@ -278,92 +275,12 @@
           </div>
         </div>
       </section>
-      <section class="section contact" id="contact">
-        <div class="section-content container">
-          <header class="section-header">
-            <h2 class="section-heading">Contact Us</h2>
-          </header>
-          <form
-            class="contact-form"
-            id="contactForm"
-            action="php/send-message.php"
-            method="POST"
-          >
-            <div class="contact-form-info-box">
-              <div class="contact-form-info">
-                <label for="name">Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  autocomplete="name"
-                />
-              </div>
-              <div class="contact-form-info">
-                <label for="email">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  autocomplete="email"
-                />
-              </div>
-            </div>
-
-            <div class="contact-form-info-box">
-              <div class="contact-form-info">
-                <label for="subject">Subject</label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  maxlength="100"
-                  required
-                />
-              </div>
-            </div>
-
-            <div class="contact-form-info-box">
-              <div class="contact-form-info">
-                <label for="message">Message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="10"
-                  maxlength="1000"
-                  required
-                ></textarea>
-              </div>
-            </div>
-
-            <!-- Actions wrapper with smaller gap -->
-            <div class="form-actions">
-              <div
-                class="g-recaptcha"
-                data-sitekey="6LeiOI0rAAAAAKg-oIIwHaOaaSJDZBHp6MIi2NTa"
-              ></div>
-
-              <button type="submit" class="btn">Send Message</button>
-
-              <div id="formError" class="form-error" role="alert" hidden></div>
-              <div id="thankYouMessage" class="thank-you" role="status" hidden>
-                Thanks for reaching out! A member of our team will follow up
-                with you soon.
-              </div>
-            </div>
-          </form>
-        </div>
-      </section>
     </main>
     <footer class="main-footer">
       <div class="footer-content">
         <p>© 2025 Christians in Tech. All rights reserved.</p>
       </div>
     </footer>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="js/menu.js"></script>
-    <script src="js/contact.js"></script>
   </body>
 </html>
