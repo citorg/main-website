@@ -9,17 +9,50 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
-// Collect & trim inputs, including honeypot field
+// reCAPTCHA response
+$recaptchaResponse = $_POST['g-recaptcha-response'] ?? '';
+if ($recaptchaResponse === '') {
+    http_response_code(400);
+    echo json_encode(['status' => 'error', 'message' => 'Captcha missing.']);
+    exit;
+}
+
+// VERIFY reCAPTCHA with Google
+$secret = 'YOUR_SECRET_KEY'; // Better: load from env/config, not hard-coded.
+$remoteIp = $_SERVER['REMOTE_ADDR'] ?? '';
+$verifyUrl = "https://www.google.com/recaptcha/api/siteverify";
+
+$ch = curl_init($verifyUrl);
+curl_setopt_array($ch, [
+    CURLOPT_POST            => true,
+    CURLOPT_RETURNTRANSFER  => true,
+    CURLOPT_POSTFIELDS      => http_build_query([
+        'secret'   => $secret,
+        'response' => $recaptchaResponse,
+        'remoteip' => $remoteIp,
+    ])
+]);
+$googleResponse = curl_exec($ch);
+curl_close($ch);
+
+if (!$googleResponse) {
+    http_response_code(500);
+    echo json_encode(['status' => 'error', 'message' => 'Captcha verification failed.']);
+    exit;
+}
+
+$captchaResult = json_decode($googleResponse, true);
+if (!($captchaResult['success'] ?? false)) {
+    http_response_code(400);
+    echo json_encode(['status' => 'error', 'message' => 'Captcha check failed.']);
+    exit;
+}
+
+// Collect & trim inputs
 $name_raw    = trim($_POST['name']    ?? '');
 $email_raw   = trim($_POST['email']   ?? '');
 $subject_raw = trim($_POST['subject'] ?? '');
 $message_raw = trim($_POST['message'] ?? '');
-$honeypot    = trim($_POST['website'] ?? '');  // hidden field
-
-// Honeypot check: if filled, assume bot and exit quietly
-if ($honeypot !== '') {
-    exit;
-}
 
 // Basic validation
 if ($name_raw === '' || $email_raw === '' || $subject_raw === '' || $message_raw === '') {
@@ -41,7 +74,7 @@ $email   = filter_var($email_raw, FILTER_SANITIZE_EMAIL);
 $subject = strip_tags($subject_raw);
 $message = strip_tags($message_raw);
 
-// Prevent header injection in name & subject
+// Prevent header injection
 foreach ([$name, $subject] as $field) {
     if (preg_match('/[\r\n]/', $field)) {
         http_response_code(400);
@@ -50,11 +83,11 @@ foreach ([$name, $subject] as $field) {
     }
 }
 
-// Truncate to limits
+// Truncate
 $subject = substr($subject, 0, 100);
 $message = substr($message, 0, 1000);
 
-// Email destination & headers
+// Email details
 $to          = 'info@christians-in-tech.org';
 $from        = 'no-reply@christians-in-tech.org';
 $subjectLine = "New Contact Form Submission: $subject";
@@ -64,14 +97,13 @@ $body .= "Name: $name\n";
 $body .= "Email: $email\n\n";
 $body .= "Message:\n$message\n";
 
-// Build headers array
-$headers = [];
+// Headers
+$headers   = [];
 $headers[] = 'MIME-Version: 1.0';
 $headers[] = 'Content-Type: text/plain; charset=UTF-8';
 $headers[] = "From: Christians in Tech <$from>";
 $headers[] = "Reply-To: $email";
 
-// Send mail
 $sent = mail($to, $subjectLine, $body, implode("\r\n", $headers));
 
 if ($sent) {

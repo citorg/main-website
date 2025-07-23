@@ -289,18 +289,6 @@
             action="php/send-message.php"
             method="POST"
           >
-            <!-- Honeypot: real users won’t see or fill this -->
-            <div style="display: none">
-              <label for="website">Website</label>
-              <input
-                type="text"
-                name="website"
-                id="website"
-                autocomplete="off"
-                tabindex="-1"
-              />
-            </div>
-
             <div class="contact-form-info-box">
               <div class="contact-form-info">
                 <label for="name">Name</label>
@@ -361,7 +349,10 @@
             </div>
             <!-- Inline error message -->
             <div id="formError" class="form-error" role="alert"></div>
-
+            <div
+              class="g-recaptcha"
+              data-sitekey="6LeiOI0rAAAAAKg-oIIwHaOaaSJDZBHp6MIi2NTa"
+            ></div>
             <button type="submit" class="btn">Send Message</button>
           </form>
         </div>
@@ -372,6 +363,7 @@
         <p>© 2025 Christians in Tech. All rights reserved.</p>
       </div>
     </footer>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="js/menu.js"></script>
     <script src="js/contact.js"></script>
   </body>
