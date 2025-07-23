@@ -337,23 +337,19 @@
                 ></textarea>
               </div>
             </div>
-            <!-- Inline thank-you message (hidden by default) -->
-            <div
-              id="thankYouMessage"
-              class="thank-you"
-              role="status"
-              style="display: none; color: #111; margin-top: 1rem"
-            >
-              Thanks for reaching out! A member of our team will follow up with
-              you soon.
+
+            <!-- Actions wrapper with smaller gap -->
+            <div class="form-actions">
+              <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+
+              <button type="submit" class="btn">Send Message</button>
+
+              <div id="formError" class="form-error" role="alert"></div>
+              <div id="thankYouMessage" class="thank-you" role="status">
+                Thanks for reaching out! A member of our team will follow up
+                with you soon.
+              </div>
             </div>
-            <!-- Inline error message -->
-            <div id="formError" class="form-error" role="alert"></div>
-            <div
-              class="g-recaptcha"
-              data-sitekey="6LeiOI0rAAAAAKg-oIIwHaOaaSJDZBHp6MIi2NTa"
-            ></div>
-            <button type="submit" class="btn">Send Message</button>
           </form>
         </div>
       </section>
