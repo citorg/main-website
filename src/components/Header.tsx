@@ -15,6 +15,7 @@ export default function Header() {
           </Link>
         </h1>
         <button
+          type="button"
           onClick={() => setIsOpen(true)}
           className="p-2 hover:bg-black rounded-lg transition-colors fixed right-1"
           aria-label="Open menu"
@@ -28,8 +29,8 @@ export default function Header() {
           }`}
       >
         <div className="flex items-center justify-between p-4 border-b border-gray-700">
-          <h2 className="text-xl font-bold">Navigation</h2>
           <button
+            type="button"
             onClick={() => setIsOpen(false)}
             className="p-2 hover:bg-black rounded-lg transition-colors"
             aria-label="Close menu"
@@ -42,43 +43,37 @@ export default function Header() {
           <Link
             to="/"
             onClick={() => setIsOpen(false)}
-            className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-800 transition-colors mb-2"
-            activeProps={{
-              className:
-                "flex items-center gap-3 p-3 rounded-lg bg-cyan-600 hover:bg-cyan-700 transition-colors mb-2",
-            }}
+            className="flex items-center gap-3 p-3 rounded-lg bg-black text-white hover:bg-white hover:text-black transition-colors mb-2"
+          // uncomment once these actually go to their proper routes
+          // activeProps={{
+          //   className:
+          //     "flex items-center gap-3 p-3 rounded-lg bg-gray-500 hover:bg-cyan-700 transition-colors mb-2",
+          // }}
           >
-            <Home size={20} />
             <span className="font-medium">About Us</span>
           </Link>
           <Link
             to="/"
             onClick={() => setIsOpen(false)}
-            className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-800 transition-colors mb-2"
-            activeProps={{
-              className:
-                "flex items-center gap-3 p-3 rounded-lg bg-cyan-600 hover:bg-cyan-700 transition-colors mb-2",
-            }}
+            className="flex items-center gap-3 p-3 rounded-lg bg-black text-white hover:bg-white hover:text-black transition-colors mb-2"
+          // activeProps={{
+          //   className:
+          //     "flex items-center gap-3 p-3 rounded-lg bg-gray-500 hover:bg-cyan-700 transition-colors mb-2",
+          // }}
           >
-            <Home size={20} />
             <span className="font-medium">Get Involved</span>
           </Link>
           <Link
             to="/"
             onClick={() => setIsOpen(false)}
-            className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-800 transition-colors mb-2"
-            activeProps={{
-              className:
-                "flex items-center gap-3 p-3 rounded-lg bg-cyan-600 hover:bg-cyan-700 transition-colors mb-2",
-            }}
+            className="flex items-center gap-3 p-3 rounded-lg bg-black text-white hover:bg-white hover:text-black transition-colors mb-2"
+          // activeProps={{
+          //   className:
+          //     "flex items-center gap-3 p-3 rounded-lg bg-gray-500 hover:bg-cyan-700 transition-colors mb-2",
+          // }}
           >
-            <Home size={20} />
             <span className="font-medium">Sponsors & Partners</span>
           </Link>
-
-          {/* Demo Links Start */}
-
-          {/* Demo Links End */}
         </nav>
       </aside>
     </>
