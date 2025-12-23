@@ -1,7 +1,8 @@
 import { Link } from "@tanstack/react-router";
 
 import { useState } from "react";
-import { Home, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import logo from "../CIT Logo.svg";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +12,7 @@ export default function Header() {
       <header className="p-4 flex items-center bg-black text-white shadow-lg">
         <h1 className="ml-4 text-xl font-semibold">
           <Link to="/">
-            <h1 className="text-4xl text-white font-bold">CIT</h1>
+            <img src={logo} alt="logo of CIT" className="h-auto w-22 p-0" />
           </Link>
         </h1>
         <button
