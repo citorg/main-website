@@ -13,3 +13,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+h1 {
+  font-weight: 600;
+  font-size: 36px;
+  font-family: "Roboto", sans-serif;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+}
+
+@theme {
+  --color-white: #ffffff;
+
+}
