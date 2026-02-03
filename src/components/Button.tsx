@@ -10,17 +10,20 @@ export default function Button({
   href: string;
 }) {
   return (
-    <div>
+    <div className="w-full flex justify-center">
       <a
         target="_blank"
-        className="border-2 border-solid p-4"
+        className="border-2 border-solid p-4 text-center inline-block"
         href={href}
         type="button"
         style={{
           color: theme === "light" ? "white" : "black",
-          width: width === "medium" ? "2rem" : "2.5rem",
+          borderColor: theme === "light" ? "white" : "black",
+          width: width === "large" ? "100%" : width === "medium" ? "200px" : "auto",
+          maxWidth: "400px",
           fontSize: "1rem",
           fontWeight: 700,
+          textDecoration: "none",
         }}
       >
         {text}
