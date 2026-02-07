@@ -96,7 +96,7 @@ export default function Home() {
 				className="bg-gray-100 w-full h-fit pb-20 relative px-4"
 			>
 				<h1
-					className="text-center py-20 font-bold"
+					className="text-center py-20 font-bold text-black"
 					style={{ fontSize: "40px" }}
 				>
 					GET INVOLVED
@@ -106,7 +106,7 @@ export default function Home() {
 					{/* Discord Section */}
 					<div className="flex flex-col items-center text-center h-full">
 						<svg
-							className="mb-6"
+							className="mb-6 text-black"
 							width="64"
 							height="64"
 							viewBox="0 0 127.14 96.36"
@@ -114,8 +114,8 @@ export default function Home() {
 						>
 							<path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.71,32.65-1.82,56.6,.48,80.21a105.73,105.73,0,0,0,32.22,16.15,77.7,77.7,0,0,0,7.39-12,67.42,67.42,0,0,1-11.86-5.62c.3-.22.59-.45.88-.68a73.16,73.16,0,0,0,69.5,0c.29.23.58.46.88.68a67.46,67.46,0,0,1-11.86,5.62,77.66,77.66,0,0,0,7.39,12,106,106,0,0,0,32.23-16.15C129.5,50.28,122.09,26.79,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z" />
 						</svg>
-						<h2 className="text-2xl font-bold mb-4">JOIN OUR DISCORD</h2>
-						<p className="mb-10 text-lg leading-relaxed flex-grow max-w-xs md:max-w-md">
+						<h2 className="text-2xl font-bold mb-4 text-black">JOIN OUR DISCORD</h2>
+						<p className="mb-10 text-lg leading-relaxed flex-grow max-w-xs md:max-w-md text-black">
 							Join the conversation on Discord. Connect with others in tech,
 							share ideas, and stay in the loop with events, updates, and
 							projects.
@@ -132,9 +132,9 @@ export default function Home() {
 
 					{/* Start a Chapter Section */}
 					<div className="flex flex-col items-center text-center h-full">
-						<Users size={64} strokeWidth={1.5} className="mb-6" />
-						<h2 className="text-2xl font-bold mb-4">START A CHAPTER</h2>
-						<p className="mb-10 text-lg leading-relaxed flex-grow max-w-xs md:max-w-md">
+						<Users size={64} strokeWidth={1.5} className="mb-6 text-black" />
+						<h2 className="text-2xl font-bold mb-4 text-black">START A CHAPTER</h2>
+						<p className="mb-10 text-lg leading-relaxed flex-grow max-w-xs md:max-w-md text-black">
 							Lead a local CIT chapter in your city. Bring Christians in tech
 							together to build relationships, share ideas, and grow lasting
 							community.
@@ -151,9 +151,9 @@ export default function Home() {
 
 					{/* Donation Section */}
 					<div className="flex flex-col items-center text-center h-full">
-						<Heart size={64} strokeWidth={1.5} className="mb-6" />
-						<h2 className="text-2xl font-bold mb-4">MAKE A DONATION</h2>
-						<p className="mb-10 text-lg leading-relaxed flex-grow max-w-xs md:max-w-md">
+						<Heart size={64} strokeWidth={1.5} className="mb-6 text-black" />
+						<h2 className="text-2xl font-bold mb-4 text-black">MAKE A DONATION</h2>
+						<p className="mb-10 text-lg leading-relaxed flex-grow max-w-xs md:max-w-md text-black">
 							Support our mission to bridge the gap between faith and
 							technology. Your contributions help us host events, support local
 							chapters, and expand our reach.
