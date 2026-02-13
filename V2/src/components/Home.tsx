@@ -27,7 +27,7 @@ export default function Home() {
 	return (
 		<div className="min-h-screen flex flex-col">
 			<div
-				className="w-full text-center md:text-left md:px-12 flex flex-col justify-center min-h-[400px] md:h-[60vh]"
+				className="w-full text-center md:text-left md:px-12 flex flex-col justify-center min-h-[400px] md:h-[50vh]"
 				style={{
 					background: `linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${bgImage})`,
 					backgroundPosition: "center",
