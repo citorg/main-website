@@ -16,7 +16,7 @@ function ProjectsPage() {
 			<section className="bg-paper py-16 md:py-24 px-6 md:px-12">
 				<div className="max-w-5xl mx-auto">
 					<Eyebrow className="mb-3">Built in the open</Eyebrow>
-					<h1 className="font-display font-stretch-expanded font-bold uppercase text-[36px] md:text-[56px] leading-[1.1] mb-6">
+					<h1 className="font-display font-bold uppercase tracking-[0.02em] text-[36px] md:text-[56px] leading-[1.1] mb-6">
 						Projects
 					</h1>
 					<p className="text-base md:text-lg leading-[1.7] mb-16 max-w-2xl">
@@ -32,7 +32,7 @@ function ProjectsPage() {
 								className="border border-gray-200 p-8 md:p-10"
 							>
 								<div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-2 mb-4">
-									<h2 className="font-display font-stretch-expanded font-bold text-[20px] md:text-[24px]">
+									<h2 className="font-display font-bold text-[20px] md:text-[24px]">
 										{project.name}
 									</h2>
 									<span className="text-xs uppercase tracking-[0.25em] text-mist">
@@ -56,7 +56,7 @@ function ProjectsPage() {
 			<section className="bg-stone py-16 md:py-24 px-6 md:px-12">
 				<div className="max-w-4xl mx-auto text-center">
 					<Eyebrow className="mb-3">Join in</Eyebrow>
-					<h2 className="font-display font-stretch-expanded font-bold uppercase text-[28px] md:text-[36px] mb-6">
+					<h2 className="font-display font-bold uppercase tracking-[0.02em] text-[28px] md:text-[36px] mb-6">
 						Want to build with us?
 					</h2>
 					<p className="text-base md:text-lg leading-[1.7] mb-8 max-w-xl mx-auto">

@@ -21,7 +21,7 @@ function EventsPage() {
 		<section className="bg-paper py-16 md:py-24 px-6 md:px-12">
 			<div className="max-w-5xl mx-auto">
 				<Eyebrow className="mb-3">Bi-weekly in Columbus</Eyebrow>
-				<h1 className="font-display font-stretch-expanded font-bold uppercase text-[36px] md:text-[56px] leading-[1.1] mb-6">
+				<h1 className="font-display font-bold uppercase tracking-[0.02em] text-[36px] md:text-[56px] leading-[1.1] mb-6">
 					Events
 				</h1>
 				<p className="text-base md:text-lg leading-[1.7] mb-12 max-w-2xl">
@@ -60,7 +60,7 @@ function EventsPage() {
 										})}{" "}
 										ET
 									</p>
-									<h2 className="font-display font-stretch-expanded font-bold text-[20px] md:text-[24px] mb-2">
+									<h2 className="font-display font-bold text-[20px] md:text-[24px] mb-2">
 										{event.name}
 									</h2>
 									<p className="text-mist">{event.venue}</p>

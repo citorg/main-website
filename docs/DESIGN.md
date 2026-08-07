@@ -30,9 +30,9 @@ against AA compliance best.)
 
 ## Typography
 
-- **Display:** Archivo (Google Fonts, variable — use the Expanded width at
-  700–800 for uppercase headlines). It keeps the current bold-uppercase voice
-  but with real character at large sizes.
+- **Display:** Montserrat (Google Fonts, 700–800 for uppercase headlines,
+  with `letter-spacing: 0.02em` on uppercase settings). It keeps the current
+  bold-uppercase voice but with real character at large sizes.
 - **Body:** Inter (already in use). 18px/1.7 for long-form paragraphs.
 - **Eyebrow/labels:** Inter, 12–13px, uppercase, `tracking-[0.25em]`, `mist`.
 
@@ -41,10 +41,8 @@ card h3 24/20, body 18/16, label 13/12.
 
 ## Signature element
 
-In "FAITH + TECH" lockups, render the plus sign as a subtle cross glyph
-(slightly extended lower arm). It's the intersection the community is named
-for, encoded typographically. Render it in signal red in the hero tagline and the OG image;
-resist using it everywhere.
+Signature: in the CHRISTIANS IN TECH lockup, the word IN renders in signal
+red — matching CIT's merch
 
 ## Section rhythm
 

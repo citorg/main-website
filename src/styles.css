@@ -14,7 +14,7 @@
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
     "Helvetica Neue", sans-serif;
-  --font-display: "Archivo", "Inter", sans-serif;
+  --font-display: "Montserrat", "Inter", sans-serif;
 }
 
 body {
@@ -48,9 +48,6 @@ code {
   }
   .hero-stagger > :nth-child(3) {
     animation-delay: 240ms;
-  }
-  .hero-stagger > :nth-child(4) {
-    animation-delay: 360ms;
   }
 }
 
