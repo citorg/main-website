@@ -80,13 +80,17 @@ function HomePage() {
 					{/* One line at every viewport: nowrap + viewport-scaled clamp, sized
 					    so it clears the section padding at 360px wide (see docs/DESIGN.md,
 					    "Signature element" — the red IN is the page's one signal accent). */}
-					<h1 className="text-white font-display font-extrabold uppercase tracking-[0.02em] whitespace-nowrap text-[clamp(1.625rem,7.3vw,4.5rem)] leading-[1.05] mb-4">
-						Christians <span className="text-signal">in</span> Tech
+					<h1 className="text-white font-display font-extrabold uppercase tracking-[0.02em] whitespace-nowrap text-[clamp(1.625rem,7.3vw,4.5rem)] leading-[1.05] mb-3">
+						Christians <span className="font-light text-signal">in</span> Tech
 					</h1>
-					<p className="text-white text-base md:text-lg leading-[1.7] max-w-2xl mb-10">
+					<p className="text-white font-medium text-[clamp(1.125rem,2.5vw,1.75rem)] leading-[1.7] max-w-[34ch] mb-8">
 						A community at the intersection of faith and technology.
 					</p>
-					<CtaLink href="https://www.meetup.com/citcbus/" theme="light">
+					<CtaLink
+						href="https://www.meetup.com/citcbus/"
+						theme="solid"
+						size="lg"
+					>
 						Upcoming Events
 					</CtaLink>
 				</div>
