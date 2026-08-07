@@ -14,8 +14,8 @@ const base =
 	"inline-block border-2 px-8 py-4 text-center font-bold text-base uppercase tracking-wider no-underline transition-colors duration-200";
 
 const themes = {
-	light: "border-white text-white hover:bg-white hover:text-black",
-	dark: "border-black text-black hover:bg-black hover:text-white",
+	light: "border-paper text-paper hover:bg-paper hover:text-ink",
+	dark: "border-ink text-ink hover:bg-ink hover:text-paper",
 };
 
 /**
