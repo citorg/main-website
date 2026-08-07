@@ -1,6 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Ear, HandHeart, Wrench } from "lucide-react";
 import CtaLink from "../components/CtaLink";
+import Eyebrow from "../components/Eyebrow";
 
 export const Route = createFileRoute("/serve")({
 	component: ServePage,
@@ -33,51 +34,55 @@ const rhythm = [
 function ServePage() {
 	return (
 		<div>
-			<section className="bg-black text-white py-24 px-6 md:px-12">
+			<section className="bg-ink text-white py-16 md:py-24 px-6 md:px-12">
 				<div className="max-w-4xl mx-auto text-center md:text-left">
-					<h1 className="font-bold text-4xl md:text-6xl uppercase mb-6">
+					<Eyebrow tone="light" className="mb-4">
+						The outreach arm of Christians in Tech
+					</Eyebrow>
+					<h1 className="font-display font-stretch-expanded font-bold uppercase text-[36px] md:text-[56px] leading-[1.1] mb-6">
 						CIT Serve
 					</h1>
-					<p className="text-xl md:text-2xl font-light leading-relaxed">
-						The outreach arm of Christians in Tech. Faith that works with its
-						hands first — and builds second.
+					<p className="text-base md:text-lg leading-[1.7]">
+						Faith that works with its hands first — and builds second.
 					</p>
 				</div>
 			</section>
 
-			<section className="py-20 px-6 md:px-12">
+			<section className="bg-paper py-16 md:py-24 px-6 md:px-12">
 				<div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
 					{rhythm.map((step) => (
 						<div key={step.title} className="flex flex-col items-center">
 							<div className="mb-6">{step.icon}</div>
-							<h2 className="text-2xl font-bold uppercase mb-4">
+							<h2 className="font-display font-stretch-expanded font-bold uppercase text-[20px] md:text-[24px] mb-4">
 								{step.title}
 							</h2>
-							<p className="text-gray-700 leading-relaxed">{step.body}</p>
+							<p className="text-base md:text-lg leading-[1.7]">{step.body}</p>
 						</div>
 					))}
 				</div>
 			</section>
 
-			<section className="bg-gray-100 py-20 px-6 md:px-12">
+			<section className="bg-stone py-16 md:py-24 px-6 md:px-12">
 				<div className="max-w-4xl mx-auto text-center">
-					<h2 className="text-3xl font-bold uppercase mb-6">
+					<Eyebrow className="mb-3">Where our projects begin</Eyebrow>
+					<h2 className="font-display font-stretch-expanded font-bold uppercase text-[28px] md:text-[36px] mb-6">
 						From serving to shipping
 					</h2>
-					<p className="text-lg text-gray-800 leading-relaxed mb-10 max-w-2xl mx-auto">
+					<p className="text-base md:text-lg leading-[1.7] mb-10 max-w-2xl mx-auto">
 						CIT Serve isn't a volunteering program with a tech department bolted
-						on — it's where our projects come from. VolunteerPress, our
-						open-source platform for in-person local contribution, grew directly
-						out of these serving sessions and conversations.
+						on — it's where our projects come from.{" "}
+						<Link
+							to="/projects"
+							className="underline underline-offset-4 transition-colors hover:text-signal"
+						>
+							VolunteerPress
+						</Link>
+						, our open-source platform for in-person local contribution, grew
+						directly out of these serving sessions and conversations.
 					</p>
-					<div className="flex flex-col sm:flex-row gap-4 justify-center">
-						<CtaLink to="/projects" theme="dark">
-							See Our Projects
-						</CtaLink>
-						<CtaLink href="https://www.meetup.com/citcbus/" theme="dark">
-							Serve With Us
-						</CtaLink>
-					</div>
+					<CtaLink href="https://www.meetup.com/citcbus/" theme="dark">
+						Serve With Us
+					</CtaLink>
 				</div>
 			</section>
 		</div>
