@@ -1,0 +1,35 @@
+name: Sync Meetup events
+
+on:
+  schedule:
+    # Nightly at 09:00 UTC (4/5 AM Eastern)
+    - cron: "0 9 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Fetch events from Meetup
+        run: node scripts/sync-events.mjs
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet src/data/events.json; then
+            echo "No changes."
+            exit 0
+          fi
+          git config user.name "cit-bot"
+          git config user.email "actions@github.com"
+          git add src/data/events.json
+          git commit -m "chore: sync events from Meetup"
+          git push
