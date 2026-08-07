@@ -1,0 +1,33 @@
+{
+	"projects": [
+		{
+			"slug": "volunteerpress",
+			"name": "VolunteerPress",
+			"origin": "CIT Serve",
+			"status": "In development",
+			"summary": "An open-source platform for in-person, local contribution — connecting people who want to serve with organizations doing the work. VolunteerPress grew directly out of CIT Serve sessions: serving alongside local organizations, listening to the challenges they face, and building toward technical solutions.",
+			"links": {},
+			"contribute": false
+		},
+		{
+			"slug": "cit-website",
+			"name": "christians-in-tech.org",
+			"origin": "CIT Community",
+			"status": "Active — contributions welcome",
+			"summary": "This website. Built and maintained by the CIT community as a real-world project for learning modern development and AI-assisted workflows. Every page you're reading came in through a pull request.",
+			"links": {
+				"repo": "https://github.com/citorg/main-website"
+			},
+			"contribute": true
+		},
+		{
+			"slug": "hack-columbus",
+			"name": "#HACK Columbus Projects",
+			"origin": "#HACK Columbus",
+			"status": "Coming soon",
+			"summary": "Projects built at #HACK Columbus will be showcased here after the hackathon.",
+			"links": {},
+			"contribute": false
+		}
+	]
+}

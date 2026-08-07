@@ -1,0 +1,196 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { HandHeart, Heart, Users } from "lucide-react";
+import CtaLink from "../components/CtaLink";
+import NextEvent from "../components/NextEvent";
+import bgImage from "../images/jordan-griffith-v8QoGa0tibk-unsplash.jpg";
+
+export const Route = createFileRoute("/")({
+	component: HomePage,
+	head: () => ({
+		meta: [{ title: "Christians in Tech" }],
+	}),
+});
+
+// TODO(good first issue): download sponsor logos into src/images/sponsors/
+// and import them instead of hotlinking third-party URLs.
+const sponsors = [
+	{
+		name: "Bethel World Prayer Center",
+		role: "Fiscal Sponsor",
+		href: "https://www.bethelworldprayercenter.org/",
+		image:
+			"https://www.bethelworldprayercenter.org/hp_wordpress/wp-content/uploads/2016/04/BWPC_0416LOGO_CUTOUT-WHITE-B-1_logo.png",
+	},
+	{
+		name: "Improving",
+		role: "Venue Sponsor",
+		href: "https://www.improving.com/locations/columbus/",
+		image: "https://cbuscodeandcoffee.com/img/improving-logo.png",
+	},
+	{
+		name: "Fruits and Roots",
+		role: "Coffee Partner",
+		href: "https://www.fruitsandroots.com/",
+		image:
+			"https://b72dd56ca0a27d895808.cdn6.editmysite.com/uploads/b/b72dd56ca0a27d89580869a7c818df6313cb0c46056097a5fc9cecf2f2017b9a/Shirt%20Designs%20(10%20%C3%97%206%20in)2_1659185276.png?width=2400&optimize=medium",
+	},
+];
+
+const involvement = [
+	{
+		icon: <Users size={64} strokeWidth={1.5} className="mb-6" aria-hidden />,
+		title: "Join a Meetup",
+		body: "We gather bi-weekly in Columbus for conversation, learning, and community — whether you're a seasoned professional or just starting your tech journey.",
+		cta: { label: "RSVP on Meetup", href: "https://www.meetup.com/citcbus/" },
+	},
+	{
+		icon: (
+			<HandHeart size={64} strokeWidth={1.5} className="mb-6" aria-hidden />
+		),
+		title: "Serve With Us",
+		body: "CIT Serve is our outreach arm: we learn from local organizations, serve alongside them, and explore technical solutions to the challenges they face.",
+		cta: { label: "About CIT Serve", to: "/serve" },
+	},
+	{
+		icon: <Heart size={64} strokeWidth={1.5} className="mb-6" aria-hidden />,
+		title: "Make a Donation",
+		body: "Support our mission to bridge the gap between faith and technology. Your contributions help us host events, serve locally, and expand our reach.",
+		cta: { label: "Donate", href: "https://onrealm.org/bwpc/-/form/give/cit" },
+	},
+];
+
+function HomePage() {
+	return (
+		<>
+			<NextEvent />
+
+			{/* Hero */}
+			<section
+				className="w-full text-center md:text-left px-6 md:px-12 flex flex-col justify-center min-h-[400px] md:h-[55vh]"
+				style={{
+					background: `linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${bgImage})`,
+					backgroundPosition: "center",
+					backgroundSize: "cover",
+				}}
+			>
+				<div className="max-w-4xl">
+					<h1 className="text-white text-4xl md:text-6xl font-bold mb-4 uppercase tracking-tight">
+						Christians <span className="font-light">in</span> Tech
+					</h1>
+					<p className="text-white text-xl md:text-3xl mb-12 font-medium">
+						A community at the intersection of faith and technology.
+					</p>
+					<CtaLink href="https://www.meetup.com/citcbus/" theme="light">
+						Upcoming Events
+					</CtaLink>
+				</div>
+			</section>
+
+			{/* About */}
+			{/* biome-ignore lint/correctness/useUniqueElementIds: static anchor for hash navigation */}
+			<section
+				id="about-us"
+				className="bg-white w-full py-20 px-6 md:px-12 border-b border-gray-100"
+			>
+				<h2 className="text-center mb-16 font-bold text-4xl uppercase">
+					About Us
+				</h2>
+				<div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 lg:gap-24 text-center md:text-left">
+					<div className="w-full md:w-1/2">
+						<img
+							className="rounded-lg shadow-xl w-full"
+							src="https://secure.meetupstatic.com/photos/event/4/7/6/c/highres_525918284.webp"
+							alt="Christians in Tech members gathered at a Columbus meetup."
+						/>
+					</div>
+					<div className="w-full md:w-1/2 space-y-8 flex flex-col items-center md:items-start">
+						<p className="text-lg text-gray-800 leading-relaxed font-light">
+							Christians in Tech is a community at the intersection of faith and
+							technology. Our meetups are designed to spark meaningful
+							conversations, promote knowledge sharing, and encourage
+							growth—both in your career and your spiritual walk with God.
+							Whether you're an experienced professional or just starting your
+							tech journey, CIT welcomes you.
+						</p>
+						<CtaLink href="https://www.meetup.com/citcbus/" theme="dark">
+							Join a Chapter
+						</CtaLink>
+					</div>
+				</div>
+			</section>
+
+			{/* Get involved */}
+			{/* biome-ignore lint/correctness/useUniqueElementIds: static anchor for hash navigation */}
+			<section id="get-involved" className="bg-gray-100 w-full pb-20 px-4">
+				<h2 className="text-center py-20 font-bold text-4xl uppercase text-black">
+					Get Involved
+				</h2>
+				<div className="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+					{involvement.map((item) => (
+						<div
+							key={item.title}
+							className="flex flex-col items-center text-center h-full text-black"
+						>
+							{item.icon}
+							<h3 className="text-2xl font-bold mb-4 uppercase">
+								{item.title}
+							</h3>
+							<p className="mb-10 text-lg leading-relaxed flex-grow max-w-md">
+								{item.body}
+							</p>
+							{"to" in item.cta && item.cta.to ? (
+								<CtaLink
+									to={item.cta.to}
+									theme="dark"
+									className="w-full max-w-[400px]"
+								>
+									{item.cta.label}
+								</CtaLink>
+							) : (
+								<CtaLink
+									href={item.cta.href}
+									theme="dark"
+									className="w-full max-w-[400px]"
+								>
+									{item.cta.label}
+								</CtaLink>
+							)}
+						</div>
+					))}
+				</div>
+			</section>
+
+			{/* Sponsors */}
+			{/* biome-ignore lint/correctness/useUniqueElementIds: static anchor for hash navigation */}
+			<section
+				id="sponsors-partners"
+				className="bg-white w-full py-24 px-6 md:px-12"
+			>
+				<h2 className="text-center mb-20 font-bold text-4xl uppercase tracking-widest text-black">
+					Sponsors & Partners
+				</h2>
+				<div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+					{sponsors.map((sponsor) => (
+						<a
+							key={sponsor.name}
+							href={sponsor.href}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="group flex flex-col items-center justify-center gap-4 p-12 border border-gray-100 bg-white hover:border-gray-200 hover:shadow-sm transition-all duration-300 h-64 md:h-72"
+						>
+							<img
+								src={sponsor.image}
+								alt={`${sponsor.name} logo`}
+								className="w-full h-full object-contain"
+								loading="lazy"
+							/>
+							<span className="text-xs uppercase tracking-widest text-gray-500">
+								{sponsor.role}
+							</span>
+						</a>
+					))}
+				</div>
+			</section>
+		</>
+	);
+}
