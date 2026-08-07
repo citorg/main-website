@@ -25,7 +25,7 @@ export default function Header() {
 
 	return (
 		<>
-			<header className="px-6 md:px-12 py-5 flex items-center justify-between bg-black text-white shadow-lg sticky top-0 z-40">
+			<header className="px-6 md:px-12 py-5 flex items-center justify-between bg-ink text-white shadow-lg sticky top-0 z-40">
 				<Link to="/" className="flex items-center" aria-label="CIT home">
 					<img
 						src={logo}
@@ -40,7 +40,7 @@ export default function Header() {
 						<Link
 							key={item.to}
 							to={item.to}
-							className="hover:text-gray-300 transition-colors [&.active]:underline underline-offset-8"
+							className="decoration-signal decoration-2 underline-offset-8 transition-colors hover:underline [&.active]:underline"
 						>
 							{item.label}
 						</Link>
@@ -79,7 +79,7 @@ export default function Header() {
 
 			{/* Mobile drawer */}
 			<aside
-				className={`fixed top-0 left-0 h-full w-80 max-w-[85vw] bg-black text-white shadow-2xl z-50 transform transition-transform duration-300 ease-in-out flex flex-col md:hidden ${
+				className={`fixed top-0 left-0 h-full w-80 max-w-[85vw] bg-ink text-white shadow-2xl z-50 transform transition-transform duration-300 ease-in-out flex flex-col md:hidden ${
 					isOpen ? "translate-x-0" : "-translate-x-full"
 				}`}
 				aria-hidden={!isOpen}

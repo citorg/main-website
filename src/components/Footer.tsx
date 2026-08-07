@@ -39,7 +39,7 @@ const socials = [
 
 export default function Footer() {
 	return (
-		<footer className="bg-black text-white">
+		<footer className="bg-ink text-white">
 			<div className="max-w-7xl mx-auto px-6 md:px-12 py-16 grid grid-cols-1 md:grid-cols-4 gap-10">
 				<div>
 					<p className="font-bold uppercase tracking-widest mb-3">
@@ -62,7 +62,7 @@ export default function Footer() {
 									{"to" in link && link.to ? (
 										<Link
 											to={link.to}
-											className="text-sm hover:text-gray-300 transition-colors"
+											className="text-sm decoration-signal decoration-2 underline-offset-4 transition-colors hover:underline"
 										>
 											{link.label}
 										</Link>
@@ -71,7 +71,7 @@ export default function Footer() {
 											href={link.href}
 											target="_blank"
 											rel="noopener noreferrer"
-											className="text-sm hover:text-gray-300 transition-colors"
+											className="text-sm decoration-signal decoration-2 underline-offset-4 transition-colors hover:underline"
 										>
 											{link.label}
 										</a>
@@ -96,7 +96,7 @@ export default function Footer() {
 								href={s.href}
 								target="_blank"
 								rel="noopener noreferrer"
-								className="hover:text-white transition-colors"
+								className="decoration-signal decoration-2 underline-offset-4 transition-colors hover:underline"
 							>
 								{s.label}
 							</a>

@@ -28,16 +28,16 @@ export default function NextEvent() {
 			href={next.url}
 			target="_blank"
 			rel="noopener noreferrer"
-			className="block bg-white border-b border-gray-200 hover:bg-gray-50 transition-colors"
+			className="group block bg-paper border-b border-gray-200 hover:bg-stone transition-colors"
 		>
 			<div className="max-w-7xl mx-auto px-6 md:px-12 py-3 flex flex-col md:flex-row md:items-center gap-1 md:gap-4 text-sm">
 				<span className="font-bold uppercase tracking-widest shrink-0">
 					Next meetup
 				</span>
-				<span className="text-gray-700">
+				<span className="text-mist">
 					{next.name} · {when} ET · {next.venue}
 				</span>
-				<span className="font-bold underline underline-offset-4 md:ml-auto shrink-0">
+				<span className="font-bold underline underline-offset-4 md:ml-auto shrink-0 transition-colors group-hover:text-signal">
 					RSVP on Meetup →
 				</span>
 			</div>

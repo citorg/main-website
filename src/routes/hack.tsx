@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import CtaLink from "../components/CtaLink";
+import Eyebrow from "../components/Eyebrow";
 
 export const Route = createFileRoute("/hack")({
 	component: HackPage,
@@ -15,14 +16,14 @@ export const Route = createFileRoute("/hack")({
 function HackPage() {
 	return (
 		<div>
-			<section className="bg-black text-white py-28 px-6 md:px-12 text-center">
-				<p className="uppercase tracking-[0.3em] text-gray-400 mb-4">
+			<section className="bg-ink text-white py-16 md:py-24 px-6 md:px-12 text-center">
+				<Eyebrow tone="light" className="mb-4">
 					A Christians in Tech event
-				</p>
-				<h1 className="font-bold text-5xl md:text-7xl uppercase mb-6">
+				</Eyebrow>
+				<h1 className="font-display font-stretch-expanded font-extrabold uppercase text-[40px] md:text-[72px] leading-[1.05] mb-6">
 					#HACK Columbus
 				</h1>
-				<p className="text-xl md:text-2xl font-light max-w-2xl mx-auto mb-10">
+				<p className="text-base md:text-lg leading-[1.7] max-w-2xl mx-auto mb-10">
 					A hackathon where Columbus builds technology that serves — for the
 					gospel, the local church, and our neighbors.
 				</p>
@@ -32,37 +33,42 @@ function HackPage() {
 				</CtaLink>
 			</section>
 
-			<section className="py-20 px-6 md:px-12">
+			<section className="bg-paper py-16 md:py-24 px-6 md:px-12">
 				<div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
 					<div>
-						<h2 className="uppercase tracking-widest text-sm text-gray-500 mb-2">
+						<h2 className="text-xs md:text-[13px] font-semibold uppercase tracking-[0.25em] text-mist mb-2">
 							When
 						</h2>
-						<p className="text-xl font-bold">Dates coming soon</p>
+						<p className="font-display font-stretch-expanded font-bold text-[20px] md:text-[24px]">
+							Dates coming soon
+						</p>
 					</div>
 					<div>
-						<h2 className="uppercase tracking-widest text-sm text-gray-500 mb-2">
+						<h2 className="text-xs md:text-[13px] font-semibold uppercase tracking-[0.25em] text-mist mb-2">
 							Where
 						</h2>
-						<p className="text-xl font-bold">Columbus, OH</p>
+						<p className="font-display font-stretch-expanded font-bold text-[20px] md:text-[24px]">
+							Columbus, OH
+						</p>
 					</div>
 					<div>
-						<h2 className="uppercase tracking-widest text-sm text-gray-500 mb-2">
+						<h2 className="text-xs md:text-[13px] font-semibold uppercase tracking-[0.25em] text-mist mb-2">
 							Who
 						</h2>
-						<p className="text-xl font-bold">
+						<p className="font-display font-stretch-expanded font-bold text-[20px] md:text-[24px]">
 							Developers, designers, and dreamers
 						</p>
 					</div>
 				</div>
 			</section>
 
-			<section className="bg-gray-100 py-20 px-6 md:px-12">
+			<section className="bg-stone py-16 md:py-24 px-6 md:px-12">
 				<div className="max-w-4xl mx-auto text-center">
-					<h2 className="text-3xl font-bold uppercase mb-6">
+					<Eyebrow className="mb-3">Get in touch</Eyebrow>
+					<h2 className="font-display font-stretch-expanded font-bold uppercase text-[28px] md:text-[36px] mb-6">
 						Questions? Want to sponsor?
 					</h2>
-					<p className="text-lg text-gray-800 mb-8">
+					<p className="text-base md:text-lg leading-[1.7] mb-8">
 						Reach out through our Discord or Meetup page — we'd love to hear
 						from you.
 					</p>
