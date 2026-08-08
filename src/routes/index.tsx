@@ -3,7 +3,8 @@ import { HandHeart, Heart, Users } from "lucide-react";
 import CtaLink from "../components/CtaLink";
 import Eyebrow from "../components/Eyebrow";
 import NextEvent from "../components/NextEvent";
-import bgImage from "../images/jordan-griffith-v8QoGa0tibk-unsplash.jpg";
+import bgImage from "../images/meetups/meetup-ai-talk-wide.jpg";
+import prayerCircleImage from "../images/meetups/meetup-prayer-circle.jpg";
 import bethelLogo from "../images/sponsors/bethel.png";
 import fruitsAndRootsLogo from "../images/sponsors/fruits-and-roots.png";
 import improvingLogo from "../images/sponsors/improving.png";
@@ -105,8 +106,8 @@ function HomePage() {
 					<div className="w-full md:w-1/2">
 						<img
 							className="rounded-lg shadow-xl w-full"
-							src="https://secure.meetupstatic.com/photos/event/4/7/6/c/highres_525918284.webp"
-							alt="Christians in Tech members gathered at a Columbus meetup."
+							src={prayerCircleImage}
+							alt="CIT members praying together at a Columbus meetup."
 						/>
 					</div>
 					<div className="w-full md:w-1/2 flex flex-col items-center md:items-start">

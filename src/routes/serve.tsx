@@ -1,7 +1,8 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { Ear, HandHeart, Wrench } from "lucide-react";
 import CtaLink from "../components/CtaLink";
 import Eyebrow from "../components/Eyebrow";
+import discussionCircleImage from "../images/meetups/meetup-discussion-circle.jpg";
 
 export const Route = createFileRoute("/serve")({
 	component: ServePage,
@@ -63,26 +64,30 @@ function ServePage() {
 			</section>
 
 			<section className="bg-stone py-16 md:py-24 px-6 md:px-12">
-				<div className="max-w-4xl mx-auto text-center">
-					<Eyebrow className="mb-3">Where our projects begin</Eyebrow>
-					<h2 className="font-display font-bold uppercase tracking-[0.02em] text-[28px] md:text-[36px] mb-6">
-						From serving to shipping
-					</h2>
-					<p className="text-base md:text-lg leading-[1.7] mb-10 max-w-2xl mx-auto">
-						CIT Serve isn't a volunteering program with a tech department bolted
-						on — it's where our projects come from.{" "}
-						<Link
-							to="/projects"
-							className="underline underline-offset-4 transition-colors hover:text-signal"
-						>
-							VolunteerPress
-						</Link>
-						, our open-source platform for in-person local contribution, grew
-						directly out of these serving sessions and conversations.
-					</p>
-					<CtaLink href="https://www.meetup.com/citcbus/" theme="dark">
-						Serve With Us
-					</CtaLink>
+				<div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 lg:gap-24 text-center md:text-left">
+					<div className="w-full md:w-1/2">
+						<img
+							className="rounded-lg shadow-xl w-full"
+							src={discussionCircleImage}
+							alt="CIT members gathered in a discussion circle at a Columbus meetup."
+							loading="lazy"
+						/>
+					</div>
+					<div className="w-full md:w-1/2 flex flex-col items-center md:items-start">
+						<Eyebrow className="mb-3">Where our projects begin</Eyebrow>
+						<h2 className="font-display font-bold uppercase tracking-[0.02em] text-[28px] md:text-[36px] mb-6">
+							From serving to shipping
+						</h2>
+						<p className="text-base md:text-lg leading-[1.7] mb-10 max-w-2xl">
+							CIT Serve isn't a volunteering program with a tech department
+							bolted on — it's where our projects come from. The tools we build
+							grow directly out of these serving sessions and the conversations
+							they spark.
+						</p>
+						<CtaLink href="https://www.meetup.com/citcbus/" theme="dark">
+							Serve With Us
+						</CtaLink>
+					</div>
 				</div>
 			</section>
 		</div>
