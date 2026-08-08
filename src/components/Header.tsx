@@ -24,46 +24,48 @@ export default function Header() {
 
 	return (
 		<>
-			<header className="px-6 md:px-12 py-5 flex items-center justify-between bg-ink text-white shadow-lg sticky top-0 z-40">
-				<Link to="/" className="flex items-center" aria-label="CIT home">
-					<img
-						src={logo}
-						alt="Christians in Tech logo"
-						className="h-10 w-auto"
-					/>
-				</Link>
+			<header className="bg-ink text-white shadow-lg sticky top-0 z-40">
+				<div className="max-w-7xl mx-auto px-6 md:px-12 py-5 flex items-center justify-between">
+					<Link to="/" className="flex items-center" aria-label="CIT home">
+						<img
+							src={logo}
+							alt="Christians in Tech logo"
+							className="h-10 w-auto"
+						/>
+					</Link>
 
-				{/* Desktop navigation */}
-				<nav className="hidden md:flex items-center gap-8 uppercase tracking-wider font-bold text-sm">
-					{navItems.map((item) => (
-						<Link
-							key={item.to}
-							to={item.to}
-							className="decoration-signal decoration-2 underline-offset-8 transition-colors hover:underline [&.active]:underline"
+					{/* Desktop navigation */}
+					<nav className="hidden md:flex items-center gap-8 uppercase tracking-wider font-bold text-sm">
+						{navItems.map((item) => (
+							<Link
+								key={item.to}
+								to={item.to}
+								className="decoration-signal decoration-2 underline-offset-8 transition-colors hover:underline [&.active]:underline"
+							>
+								{item.label}
+							</Link>
+						))}
+						<a
+							href="https://www.meetup.com/citcbus/"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="border-2 border-white px-5 py-2 hover:bg-white hover:text-black transition-colors"
 						>
-							{item.label}
-						</Link>
-					))}
-					<a
-						href="https://www.meetup.com/citcbus/"
-						target="_blank"
-						rel="noopener noreferrer"
-						className="border-2 border-white px-5 py-2 hover:bg-white hover:text-black transition-colors"
-					>
-						Join Us
-					</a>
-				</nav>
+							Join Us
+						</a>
+					</nav>
 
-				{/* Mobile menu button */}
-				<button
-					type="button"
-					onClick={() => setIsOpen(true)}
-					className="p-2 md:hidden hover:bg-gray-800 rounded-lg transition-colors"
-					aria-label="Open menu"
-					aria-expanded={isOpen}
-				>
-					<Menu size={32} />
-				</button>
+					{/* Mobile menu button */}
+					<button
+						type="button"
+						onClick={() => setIsOpen(true)}
+						className="p-2 md:hidden hover:bg-gray-800 rounded-lg transition-colors"
+						aria-label="Open menu"
+						aria-expanded={isOpen}
+					>
+						<Menu size={32} />
+					</button>
+				</div>
 			</header>
 
 			{/* Backdrop */}
