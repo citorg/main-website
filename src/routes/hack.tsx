@@ -17,7 +17,9 @@ export const Route = createFileRoute("/hack")({
 function HackPage() {
 	return (
 		<div>
-			{/* Hero — full-bleed photo of the 2025 hackathon floor + ink overlay */}
+			{/* Hero — full-bleed photo of the 2025 hackathon floor + ink overlay.
+			    Centered poster treatment: event/initiative pages (/hack, /serve)
+			    center their heroes; community pages (Home, Events) left-align. */}
 			<section
 				className="text-white py-24 md:py-36 text-center flex flex-col justify-center"
 				style={{

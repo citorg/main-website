@@ -35,23 +35,21 @@ const rhythm = [
 function ServePage() {
 	return (
 		<div>
+			{/* Hero — centered poster treatment. System: event/initiative pages
+			    (/serve, /hack) center their heroes; community pages (Home,
+			    Events) left-align. */}
 			<section className="bg-ink text-white py-16 md:py-24">
-				<Container>
-					<div className="max-w-4xl text-center md:text-left mx-auto md:mx-0">
-						<Eyebrow tone="light" className="mb-4">
-							The outreach arm of Christians in Tech
-						</Eyebrow>
-						<h1 className="font-display font-bold uppercase tracking-[0.02em] text-[36px] md:text-[56px] leading-[1.1] mb-6">
-							CIT Serve
-						</h1>
-						<p className="text-base md:text-lg leading-[1.7]">
-							Faith that works with its hands.
-						</p>
-						<p className="mt-3 text-sm md:text-base italic text-mist">
-							"As each has received a gift, use it to serve one another." — 1
-							Peter 4:10
-						</p>
-					</div>
+				<Container className="text-center">
+					<Eyebrow tone="light" className="mb-4">
+						The outreach arm of Christians in Tech
+					</Eyebrow>
+					<h1 className="font-display font-bold uppercase tracking-[0.02em] text-[36px] md:text-[56px] leading-[1.1] mb-6">
+						CIT Serve
+					</h1>
+					<p className="text-base md:text-lg leading-[1.7] italic max-w-2xl mx-auto">
+						"As each has received a gift, use it to serve one another."
+						<span className="not-italic text-mist"> — 1 Peter 4:10</span>
+					</p>
 				</Container>
 			</section>
 

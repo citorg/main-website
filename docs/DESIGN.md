@@ -50,6 +50,8 @@ wordmark.
 One idea per section, one CTA per section. Sections alternate `paper` /
 `stone`; hero and footer are `ink`. Vertical padding: `py-24` desktop,
 `py-16` mobile. Every section: eyebrow label → heading → body → single CTA.
+Heroes: community pages (Home, Events) left-align; event/initiative pages
+(/hack, /serve) center them as posters.
 
 ## Photography
 
