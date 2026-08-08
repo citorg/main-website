@@ -88,11 +88,7 @@ function HomePage() {
 						<p className="text-white font-medium text-[clamp(1.125rem,2.5vw,1.75rem)] leading-[1.7] mb-8">
 							A community at the intersection of faith and technology.
 						</p>
-						<CtaLink
-							href="https://www.meetup.com/citcbus/"
-							theme="solid"
-							size="lg"
-						>
+						<CtaLink to="/events" theme="solid" size="lg">
 							Upcoming Events
 						</CtaLink>
 					</div>

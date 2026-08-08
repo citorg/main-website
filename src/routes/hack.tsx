@@ -48,11 +48,11 @@ function HackPage() {
 				<Container className="text-center">
 					<Eyebrow className="mb-3">Coming in 2026</Eyebrow>
 					<h2 className="font-display font-bold uppercase tracking-[0.02em] text-[28px] md:text-[36px] mb-6">
-						2026 Details Coming Soon
+						The Next #HACK Is On Its Way
 					</h2>
 					<p className="text-base md:text-lg leading-[1.7] mb-8 max-w-2xl mx-auto">
-						Challenges, dates, and times for the next #HACK Columbus will be
-						announced soon. Be the first to know:
+						Challenges, dates, and times will be announced through our
+						community. Be the first to know:
 					</p>
 					<div className="flex flex-col sm:flex-row justify-center gap-4">
 						<CtaLink href="https://www.meetup.com/citcbus/" theme="dark">
