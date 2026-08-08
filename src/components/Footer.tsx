@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import Container from "./Container";
 
 const columns = [
 	{
@@ -39,7 +40,7 @@ const socials = [
 export default function Footer() {
 	return (
 		<footer className="bg-ink text-white">
-			<div className="max-w-7xl mx-auto px-6 md:px-12 py-16 grid grid-cols-1 md:grid-cols-4 gap-10">
+			<Container className="py-16 grid grid-cols-1 md:grid-cols-4 gap-10">
 				<div>
 					<p className="font-bold uppercase tracking-widest mb-3">
 						Christians in Tech
@@ -80,10 +81,10 @@ export default function Footer() {
 						</ul>
 					</nav>
 				))}
-			</div>
+			</Container>
 
 			<div className="border-t border-gray-800">
-				<div className="max-w-7xl mx-auto px-6 md:px-12 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-400">
+				<Container className="py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-400">
 					<span>
 						© {new Date().getFullYear()} Christians in Tech. All rights
 						reserved.
@@ -101,7 +102,7 @@ export default function Footer() {
 							</a>
 						))}
 					</div>
-				</div>
+				</Container>
 			</div>
 		</footer>
 	);

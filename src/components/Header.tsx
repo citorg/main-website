@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import logo from "../images/cit-logo.svg";
+import Container from "./Container";
 
 const navItems = [
 	{ to: "/events", label: "Events" },
@@ -25,7 +26,7 @@ export default function Header() {
 	return (
 		<>
 			<header className="bg-ink text-white shadow-lg sticky top-0 z-40">
-				<div className="max-w-7xl mx-auto px-6 md:px-12 py-5 flex items-center justify-between">
+				<Container className="py-5 flex items-center justify-between">
 					<Link to="/" className="flex items-center" aria-label="CIT home">
 						<img
 							src={logo}
@@ -65,7 +66,7 @@ export default function Header() {
 					>
 						<Menu size={32} />
 					</button>
-				</div>
+				</Container>
 			</header>
 
 			{/* Backdrop */}

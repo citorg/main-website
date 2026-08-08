@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Ear, HandHeart, Wrench } from "lucide-react";
+import Container from "../components/Container";
 import CtaLink from "../components/CtaLink";
 import Eyebrow from "../components/Eyebrow";
 
@@ -34,8 +35,8 @@ const rhythm = [
 function ServePage() {
 	return (
 		<div>
-			<section className="bg-ink text-white py-16 md:py-24 px-6 md:px-12">
-				<div className="max-w-7xl mx-auto">
+			<section className="bg-ink text-white py-16 md:py-24">
+				<Container>
 					<div className="max-w-4xl text-center md:text-left mx-auto md:mx-0">
 						<Eyebrow tone="light" className="mb-4">
 							The outreach arm of Christians in Tech
@@ -51,11 +52,11 @@ function ServePage() {
 							Peter 4:10
 						</p>
 					</div>
-				</div>
+				</Container>
 			</section>
 
-			<section className="bg-paper py-16 md:py-24 px-6 md:px-12">
-				<div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+			<section className="bg-paper py-16 md:py-24">
+				<Container className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
 					{rhythm.map((step) => (
 						<div key={step.title} className="flex flex-col items-center">
 							<div className="mb-6">{step.icon}</div>
@@ -65,11 +66,11 @@ function ServePage() {
 							<p className="text-base md:text-lg leading-[1.7]">{step.body}</p>
 						</div>
 					))}
-				</div>
+				</Container>
 			</section>
 
-			<section className="bg-stone py-16 md:py-24 px-6 md:px-12">
-				<div className="max-w-7xl mx-auto text-center">
+			<section className="bg-stone py-16 md:py-24">
+				<Container className="text-center">
 					<Eyebrow className="mb-3">Get involved</Eyebrow>
 					<h2 className="font-display font-bold uppercase tracking-[0.02em] text-[28px] md:text-[36px] mb-6">
 						Serve With Us
@@ -86,7 +87,7 @@ function ServePage() {
 							Join the Discord
 						</CtaLink>
 					</div>
-				</div>
+				</Container>
 			</section>
 		</div>
 	);

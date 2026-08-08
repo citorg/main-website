@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import Container from "../components/Container";
 import CtaLink from "../components/CtaLink";
 import Eyebrow from "../components/Eyebrow";
 import floorWideImage from "../images/hack-2025/hack-2025-floor-wide.jpg";
@@ -18,14 +19,14 @@ function HackPage() {
 		<div>
 			{/* Hero — full-bleed photo of the 2025 hackathon floor + ink overlay */}
 			<section
-				className="text-white py-24 md:py-36 px-6 md:px-12 text-center flex flex-col justify-center"
+				className="text-white py-24 md:py-36 text-center flex flex-col justify-center"
 				style={{
 					background: `linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${floorWideImage})`,
 					backgroundPosition: "center",
 					backgroundSize: "cover",
 				}}
 			>
-				<div className="max-w-7xl mx-auto w-full">
+				<Container className="w-full">
 					<Eyebrow tone="light" className="mb-4">
 						A Christians in Tech event
 					</Eyebrow>
@@ -37,12 +38,12 @@ function HackPage() {
 						and its people. Developers, designers, students, and first-timers —
 						all are welcome.
 					</p>
-				</div>
+				</Container>
 			</section>
 
 			{/* 2026 */}
-			<section className="bg-paper py-16 md:py-24 px-6 md:px-12">
-				<div className="max-w-7xl mx-auto text-center">
+			<section className="bg-paper py-16 md:py-24">
+				<Container className="text-center">
 					<Eyebrow className="mb-3">Coming in 2026</Eyebrow>
 					<h2 className="font-display font-bold uppercase tracking-[0.02em] text-[28px] md:text-[36px] mb-6">
 						2026 Details Coming Soon
@@ -59,7 +60,7 @@ function HackPage() {
 							Join the Discord
 						</CtaLink>
 					</div>
-				</div>
+				</Container>
 			</section>
 		</div>
 	);

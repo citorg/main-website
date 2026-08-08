@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { HandHeart, Heart, Users } from "lucide-react";
+import Container from "../components/Container";
 import CtaLink from "../components/CtaLink";
 import Eyebrow from "../components/Eyebrow";
 import NextEvent from "../components/NextEvent";
@@ -70,14 +71,14 @@ function HomePage() {
 
 			{/* Hero — the one full-bleed photo + ink overlay on the site */}
 			<section
-				className="w-full text-center md:text-left px-6 md:px-12 flex flex-col justify-center min-h-[400px] md:h-[55vh]"
+				className="w-full text-center md:text-left flex flex-col justify-center min-h-[400px] md:h-[55vh]"
 				style={{
 					background: `linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${bgImage})`,
 					backgroundPosition: "center",
 					backgroundSize: "cover",
 				}}
 			>
-				<div className="max-w-7xl mx-auto w-full">
+				<Container className="w-full">
 					<div className="max-w-4xl hero-stagger">
 						{/* One line at every viewport: nowrap + viewport-scaled clamp, sized
 						    so it clears the section padding at 360px wide. */}
@@ -95,16 +96,13 @@ function HomePage() {
 							Upcoming Events
 						</CtaLink>
 					</div>
-				</div>
+				</Container>
 			</section>
 
 			{/* About */}
 			{/* biome-ignore lint/correctness/useUniqueElementIds: static anchor for hash navigation */}
-			<section
-				id="about-us"
-				className="bg-paper w-full py-16 md:py-24 px-6 md:px-12"
-			>
-				<div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 lg:gap-24 text-center md:text-left">
+			<section id="about-us" className="bg-paper w-full py-16 md:py-24">
+				<Container className="flex flex-col md:flex-row items-center gap-12 lg:gap-24 text-center md:text-left">
 					<div className="w-full md:w-1/2">
 						<img
 							className="rounded-lg shadow-xl w-full"
@@ -127,16 +125,13 @@ function HomePage() {
 							Join Us
 						</CtaLink>
 					</div>
-				</div>
+				</Container>
 			</section>
 
 			{/* Get involved */}
 			{/* biome-ignore lint/correctness/useUniqueElementIds: static anchor for hash navigation */}
-			<section
-				id="get-involved"
-				className="bg-stone w-full py-16 md:py-24 px-6 md:px-12"
-			>
-				<div className="max-w-7xl mx-auto">
+			<section id="get-involved" className="bg-stone w-full py-16 md:py-24">
+				<Container>
 					<div className="text-center mb-16">
 						<Eyebrow className="mb-3">Find your place</Eyebrow>
 						<h2 className={sectionHeading}>Get Involved</h2>
@@ -174,16 +169,16 @@ function HomePage() {
 							</div>
 						))}
 					</div>
-				</div>
+				</Container>
 			</section>
 
 			{/* Sponsors */}
 			{/* biome-ignore lint/correctness/useUniqueElementIds: static anchor for hash navigation */}
 			<section
 				id="sponsors-partners"
-				className="bg-paper w-full py-16 md:py-24 px-6 md:px-12"
+				className="bg-paper w-full py-16 md:py-24"
 			>
-				<div className="max-w-7xl mx-auto">
+				<Container>
 					<div className="text-center mb-16">
 						<Eyebrow className="mb-3">Thank you</Eyebrow>
 						<h2 className={sectionHeading}>Sponsors & Partners</h2>
@@ -209,7 +204,7 @@ function HomePage() {
 							</a>
 						))}
 					</div>
-				</div>
+				</Container>
 			</section>
 		</>
 	);
