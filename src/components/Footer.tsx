@@ -13,7 +13,6 @@ const columns = [
 	{
 		heading: "Build",
 		links: [
-			{ label: "Projects", to: "/projects" },
 			{ label: "#HACK Columbus", to: "/hack" },
 			{
 				label: "Contribute on GitHub",

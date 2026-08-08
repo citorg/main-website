@@ -6,7 +6,6 @@ import logo from "../images/cit-logo.svg";
 const navItems = [
 	{ to: "/events", label: "Events" },
 	{ to: "/serve", label: "Serve" },
-	{ to: "/projects", label: "Projects" },
 	{ to: "/hack", label: "#HACK" },
 ];
 

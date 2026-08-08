@@ -3,8 +3,8 @@ import { HandHeart, Heart, Users } from "lucide-react";
 import CtaLink from "../components/CtaLink";
 import Eyebrow from "../components/Eyebrow";
 import NextEvent from "../components/NextEvent";
-import bgImage from "../images/meetups/meetup-ai-talk-wide.jpg";
-import prayerCircleImage from "../images/meetups/meetup-prayer-circle.jpg";
+import bgImage from "../images/jordan-griffith-v8QoGa0tibk-unsplash.jpg";
+import aiTalkImage from "../images/meetups/meetup-ai-talk-wide.jpg";
 import bethelLogo from "../images/sponsors/bethel.png";
 import fruitsAndRootsLogo from "../images/sponsors/fruits-and-roots.png";
 import improvingLogo from "../images/sponsors/improving.png";
@@ -106,8 +106,8 @@ function HomePage() {
 					<div className="w-full md:w-1/2">
 						<img
 							className="rounded-lg shadow-xl w-full"
-							src={prayerCircleImage}
-							alt="CIT members praying together at a Columbus meetup."
+							src={aiTalkImage}
+							alt="A speaker presenting on AI to a full room at a CIT meetup at Improving."
 						/>
 					</div>
 					<div className="w-full md:w-1/2 flex flex-col items-center md:items-start">
@@ -122,7 +122,7 @@ function HomePage() {
 							tech journey, CIT welcomes you.
 						</p>
 						<CtaLink href="https://www.meetup.com/citcbus/" theme="dark">
-							Join a Chapter
+							Join Us
 						</CtaLink>
 					</div>
 				</div>

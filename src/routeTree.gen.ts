@@ -12,7 +12,6 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as EventsRouteImport } from './routes/events'
 import { Route as HackRouteImport } from './routes/hack'
-import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as ServeRouteImport } from './routes/serve'
 
 const IndexRoute = IndexRouteImport.update({
@@ -30,11 +29,6 @@ const HackRoute = HackRouteImport.update({
   path: '/hack',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ProjectsRoute = ProjectsRouteImport.update({
-  id: '/projects',
-  path: '/projects',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const ServeRoute = ServeRouteImport.update({
   id: '/serve',
   path: '/serve',
@@ -45,14 +39,12 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/events': typeof EventsRoute
   '/hack': typeof HackRoute
-  '/projects': typeof ProjectsRoute
   '/serve': typeof ServeRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/events': typeof EventsRoute
   '/hack': typeof HackRoute
-  '/projects': typeof ProjectsRoute
   '/serve': typeof ServeRoute
 }
 export interface FileRoutesById {
@@ -60,22 +52,20 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/events': typeof EventsRoute
   '/hack': typeof HackRoute
-  '/projects': typeof ProjectsRoute
   '/serve': typeof ServeRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/events' | '/hack' | '/projects' | '/serve'
+  fullPaths: '/' | '/events' | '/hack' | '/serve'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/events' | '/hack' | '/projects' | '/serve'
-  id: '__root__' | '/' | '/events' | '/hack' | '/projects' | '/serve'
+  to: '/' | '/events' | '/hack' | '/serve'
+  id: '__root__' | '/' | '/events' | '/hack' | '/serve'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   EventsRoute: typeof EventsRoute
   HackRoute: typeof HackRoute
-  ProjectsRoute: typeof ProjectsRoute
   ServeRoute: typeof ServeRoute
 }
 
@@ -102,13 +92,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HackRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/projects': {
-      id: '/projects'
-      path: '/projects'
-      fullPath: '/projects'
-      preLoaderRoute: typeof ProjectsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/serve': {
       id: '/serve'
       path: '/serve'
@@ -123,7 +106,6 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   EventsRoute: EventsRoute,
   HackRoute: HackRoute,
-  ProjectsRoute: ProjectsRoute,
   ServeRoute: ServeRoute,
 }
 export const routeTree = rootRouteImport
