@@ -78,12 +78,11 @@ function HomePage() {
 			>
 				<div className="max-w-4xl hero-stagger">
 					{/* One line at every viewport: nowrap + viewport-scaled clamp, sized
-					    so it clears the section padding at 360px wide (see docs/DESIGN.md,
-					    "Signature element" — the red IN is the page's one signal accent). */}
+					    so it clears the section padding at 360px wide. */}
 					<h1 className="text-white font-display font-extrabold uppercase tracking-[0.02em] whitespace-nowrap text-[clamp(1.625rem,7.3vw,4.5rem)] leading-[1.05] mb-3">
-						Christians <span className="font-light text-signal">in</span> Tech
+						Christians <span className="font-light">in</span> Tech
 					</h1>
-					<p className="text-white font-medium text-[clamp(1.125rem,2.5vw,1.75rem)] leading-[1.7] max-w-[34ch] mb-8">
+					<p className="text-white font-medium text-[clamp(1.125rem,2.5vw,1.75rem)] leading-[1.7] mb-8">
 						A community at the intersection of faith and technology.
 					</p>
 					<CtaLink
