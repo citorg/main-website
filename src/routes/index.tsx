@@ -4,6 +4,9 @@ import CtaLink from "../components/CtaLink";
 import Eyebrow from "../components/Eyebrow";
 import NextEvent from "../components/NextEvent";
 import bgImage from "../images/jordan-griffith-v8QoGa0tibk-unsplash.jpg";
+import bethelLogo from "../images/sponsors/bethel.png";
+import fruitsAndRootsLogo from "../images/sponsors/fruits-and-roots.png";
+import improvingLogo from "../images/sponsors/improving.png";
 
 export const Route = createFileRoute("/")({
 	component: HomePage,
@@ -12,28 +15,24 @@ export const Route = createFileRoute("/")({
 	}),
 });
 
-// TODO(good first issue): download sponsor logos into src/images/sponsors/
-// and import them instead of hotlinking third-party URLs.
 const sponsors = [
 	{
 		name: "Bethel World Prayer Center",
 		role: "Fiscal Sponsor",
 		href: "https://www.bethelworldprayercenter.org/",
-		image:
-			"https://www.bethelworldprayercenter.org/hp_wordpress/wp-content/uploads/2016/04/BWPC_0416LOGO_CUTOUT-WHITE-B-1_logo.png",
+		image: bethelLogo,
 	},
 	{
 		name: "Improving",
 		role: "Venue Sponsor",
 		href: "https://www.improving.com/locations/columbus/",
-		image: "https://cbuscodeandcoffee.com/img/improving-logo.png",
+		image: improvingLogo,
 	},
 	{
 		name: "Fruits and Roots",
 		role: "Coffee Partner",
 		href: "https://www.fruitsandroots.com/",
-		image:
-			"https://b72dd56ca0a27d895808.cdn6.editmysite.com/uploads/b/b72dd56ca0a27d89580869a7c818df6313cb0c46056097a5fc9cecf2f2017b9a/Shirt%20Designs%20(10%20%C3%97%206%20in)2_1659185276.png?width=2400&optimize=medium",
+		image: fruitsAndRootsLogo,
 	},
 ];
 
@@ -60,29 +59,8 @@ const involvement = [
 	},
 ];
 
-/**
- * The "+" in the FAITH + TECH lockup, drawn as a subtle cross: the lower
- * arm runs slightly longer than the upper (see docs/DESIGN.md, "Signature
- * element"). This is the page's single signal-red accent.
- */
-function CrossPlus() {
-	return (
-		<>
-			<span className="sr-only">+</span>
-			<svg
-				viewBox="0 0 20 24"
-				className="inline-block h-[0.8em] w-auto text-signal"
-				aria-hidden="true"
-			>
-				<rect x="8" y="0" width="4" height="24" fill="currentColor" />
-				<rect x="0" y="8" width="20" height="4" fill="currentColor" />
-			</svg>
-		</>
-	);
-}
-
 const sectionHeading =
-	"font-display font-stretch-expanded font-bold uppercase text-[28px] md:text-[36px]";
+	"font-display font-bold uppercase tracking-[0.02em] text-[28px] md:text-[36px]";
 
 function HomePage() {
 	return (
@@ -99,16 +77,19 @@ function HomePage() {
 				}}
 			>
 				<div className="max-w-4xl hero-stagger">
-					<p className="font-display font-stretch-expanded font-bold uppercase tracking-[0.25em] text-sm md:text-base text-white mb-4 flex items-center justify-center md:justify-start gap-2">
-						Faith <CrossPlus /> Tech
-					</p>
-					<h1 className="text-white font-display font-stretch-expanded font-extrabold uppercase tracking-tight text-[40px] md:text-[72px] leading-[1.05] mb-4">
+					{/* One line at every viewport: nowrap + viewport-scaled clamp, sized
+					    so it clears the section padding at 360px wide. */}
+					<h1 className="text-white font-display font-extrabold uppercase tracking-[0.02em] whitespace-nowrap text-[clamp(1.625rem,7.3vw,4.5rem)] leading-[1.05] mb-3">
 						Christians <span className="font-light">in</span> Tech
 					</h1>
-					<p className="text-white text-base md:text-lg leading-[1.7] max-w-2xl mb-10">
+					<p className="text-white font-medium text-[clamp(1.125rem,2.5vw,1.75rem)] leading-[1.7] mb-8">
 						A community at the intersection of faith and technology.
 					</p>
-					<CtaLink href="https://www.meetup.com/citcbus/" theme="light">
+					<CtaLink
+						href="https://www.meetup.com/citcbus/"
+						theme="solid"
+						size="lg"
+					>
 						Upcoming Events
 					</CtaLink>
 				</div>
@@ -163,7 +144,7 @@ function HomePage() {
 							className="flex flex-col items-center text-center h-full"
 						>
 							{item.icon}
-							<h3 className="font-display font-stretch-expanded font-bold uppercase text-[20px] md:text-[24px] mb-4">
+							<h3 className="font-display font-bold uppercase tracking-[0.02em] text-[20px] md:text-[24px] mb-4">
 								{item.title}
 							</h3>
 							<p className="mb-10 text-base md:text-lg leading-[1.7] flex-grow max-w-md">

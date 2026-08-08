@@ -39,7 +39,7 @@ function ServePage() {
 					<Eyebrow tone="light" className="mb-4">
 						The outreach arm of Christians in Tech
 					</Eyebrow>
-					<h1 className="font-display font-stretch-expanded font-bold uppercase text-[36px] md:text-[56px] leading-[1.1] mb-6">
+					<h1 className="font-display font-bold uppercase tracking-[0.02em] text-[36px] md:text-[56px] leading-[1.1] mb-6">
 						CIT Serve
 					</h1>
 					<p className="text-base md:text-lg leading-[1.7]">
@@ -53,7 +53,7 @@ function ServePage() {
 					{rhythm.map((step) => (
 						<div key={step.title} className="flex flex-col items-center">
 							<div className="mb-6">{step.icon}</div>
-							<h2 className="font-display font-stretch-expanded font-bold uppercase text-[20px] md:text-[24px] mb-4">
+							<h2 className="font-display font-bold uppercase tracking-[0.02em] text-[20px] md:text-[24px] mb-4">
 								{step.title}
 							</h2>
 							<p className="text-base md:text-lg leading-[1.7]">{step.body}</p>
@@ -65,7 +65,7 @@ function ServePage() {
 			<section className="bg-stone py-16 md:py-24 px-6 md:px-12">
 				<div className="max-w-4xl mx-auto text-center">
 					<Eyebrow className="mb-3">Where our projects begin</Eyebrow>
-					<h2 className="font-display font-stretch-expanded font-bold uppercase text-[28px] md:text-[36px] mb-6">
+					<h2 className="font-display font-bold uppercase tracking-[0.02em] text-[28px] md:text-[36px] mb-6">
 						From serving to shipping
 					</h2>
 					<p className="text-base md:text-lg leading-[1.7] mb-10 max-w-2xl mx-auto">

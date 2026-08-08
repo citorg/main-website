@@ -20,7 +20,7 @@ function HackPage() {
 				<Eyebrow tone="light" className="mb-4">
 					A Christians in Tech event
 				</Eyebrow>
-				<h1 className="font-display font-stretch-expanded font-extrabold uppercase text-[40px] md:text-[72px] leading-[1.05] mb-6">
+				<h1 className="font-display font-extrabold uppercase tracking-[0.02em] text-[40px] md:text-[72px] leading-[1.05] mb-6">
 					#HACK Columbus
 				</h1>
 				<p className="text-base md:text-lg leading-[1.7] max-w-2xl mx-auto mb-10">
@@ -39,7 +39,7 @@ function HackPage() {
 						<h2 className="text-xs md:text-[13px] font-semibold uppercase tracking-[0.25em] text-mist mb-2">
 							When
 						</h2>
-						<p className="font-display font-stretch-expanded font-bold text-[20px] md:text-[24px]">
+						<p className="font-display font-bold text-[20px] md:text-[24px]">
 							Dates coming soon
 						</p>
 					</div>
@@ -47,7 +47,7 @@ function HackPage() {
 						<h2 className="text-xs md:text-[13px] font-semibold uppercase tracking-[0.25em] text-mist mb-2">
 							Where
 						</h2>
-						<p className="font-display font-stretch-expanded font-bold text-[20px] md:text-[24px]">
+						<p className="font-display font-bold text-[20px] md:text-[24px]">
 							Columbus, OH
 						</p>
 					</div>
@@ -55,7 +55,7 @@ function HackPage() {
 						<h2 className="text-xs md:text-[13px] font-semibold uppercase tracking-[0.25em] text-mist mb-2">
 							Who
 						</h2>
-						<p className="font-display font-stretch-expanded font-bold text-[20px] md:text-[24px]">
+						<p className="font-display font-bold text-[20px] md:text-[24px]">
 							Developers, designers, and dreamers
 						</p>
 					</div>
@@ -65,7 +65,7 @@ function HackPage() {
 			<section className="bg-stone py-16 md:py-24 px-6 md:px-12">
 				<div className="max-w-4xl mx-auto text-center">
 					<Eyebrow className="mb-3">Get in touch</Eyebrow>
-					<h2 className="font-display font-stretch-expanded font-bold uppercase text-[28px] md:text-[36px] mb-6">
+					<h2 className="font-display font-bold uppercase tracking-[0.02em] text-[28px] md:text-[36px] mb-6">
 						Questions? Want to sponsor?
 					</h2>
 					<p className="text-base md:text-lg leading-[1.7] mb-8">
