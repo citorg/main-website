@@ -19,7 +19,7 @@ function EventsPage() {
 
 	return (
 		<section className="bg-paper py-16 md:py-24 px-6 md:px-12">
-			<div className="max-w-5xl mx-auto">
+			<div className="max-w-7xl mx-auto">
 				<Eyebrow className="mb-3">Bi-weekly in Columbus</Eyebrow>
 				<h1 className="font-display font-bold uppercase tracking-[0.02em] text-[36px] md:text-[56px] leading-[1.1] mb-6">
 					Events

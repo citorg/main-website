@@ -25,22 +25,24 @@ function HackPage() {
 					backgroundSize: "cover",
 				}}
 			>
-				<Eyebrow tone="light" className="mb-4">
-					A Christians in Tech event
-				</Eyebrow>
-				<h1 className="font-display font-extrabold uppercase tracking-[0.02em] text-[40px] md:text-[72px] leading-[1.05] mb-6">
-					#HACK Columbus
-				</h1>
-				<p className="text-base md:text-lg leading-[1.7] max-w-2xl mx-auto">
-					A hackathon where Columbus builds technology that serves our city and
-					its people. Developers, designers, students, and first-timers — all
-					are welcome.
-				</p>
+				<div className="max-w-7xl mx-auto w-full">
+					<Eyebrow tone="light" className="mb-4">
+						A Christians in Tech event
+					</Eyebrow>
+					<h1 className="font-display font-extrabold uppercase tracking-[0.02em] text-[40px] md:text-[72px] leading-[1.05] mb-6">
+						#HACK Columbus
+					</h1>
+					<p className="text-base md:text-lg leading-[1.7] max-w-2xl mx-auto">
+						A hackathon where Columbus builds technology that serves our city
+						and its people. Developers, designers, students, and first-timers —
+						all are welcome.
+					</p>
+				</div>
 			</section>
 
 			{/* 2026 */}
 			<section className="bg-paper py-16 md:py-24 px-6 md:px-12">
-				<div className="max-w-4xl mx-auto text-center">
+				<div className="max-w-7xl mx-auto text-center">
 					<Eyebrow className="mb-3">Coming in 2026</Eyebrow>
 					<h2 className="font-display font-bold uppercase tracking-[0.02em] text-[28px] md:text-[36px] mb-6">
 						2026 Details Coming Soon

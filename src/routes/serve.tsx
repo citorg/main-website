@@ -35,21 +35,27 @@ function ServePage() {
 	return (
 		<div>
 			<section className="bg-ink text-white py-16 md:py-24 px-6 md:px-12">
-				<div className="max-w-4xl mx-auto text-center md:text-left">
-					<Eyebrow tone="light" className="mb-4">
-						The outreach arm of Christians in Tech
-					</Eyebrow>
-					<h1 className="font-display font-bold uppercase tracking-[0.02em] text-[36px] md:text-[56px] leading-[1.1] mb-6">
-						CIT Serve
-					</h1>
-					<p className="text-base md:text-lg leading-[1.7]">
-						Faith that works with its hands first — and builds second.
-					</p>
+				<div className="max-w-7xl mx-auto">
+					<div className="max-w-4xl text-center md:text-left mx-auto md:mx-0">
+						<Eyebrow tone="light" className="mb-4">
+							The outreach arm of Christians in Tech
+						</Eyebrow>
+						<h1 className="font-display font-bold uppercase tracking-[0.02em] text-[36px] md:text-[56px] leading-[1.1] mb-6">
+							CIT Serve
+						</h1>
+						<p className="text-base md:text-lg leading-[1.7]">
+							Faith that works with its hands.
+						</p>
+						<p className="mt-3 text-sm md:text-base italic text-mist">
+							"As each has received a gift, use it to serve one another." — 1
+							Peter 4:10
+						</p>
+					</div>
 				</div>
 			</section>
 
 			<section className="bg-paper py-16 md:py-24 px-6 md:px-12">
-				<div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+				<div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
 					{rhythm.map((step) => (
 						<div key={step.title} className="flex flex-col items-center">
 							<div className="mb-6">{step.icon}</div>
@@ -63,7 +69,7 @@ function ServePage() {
 			</section>
 
 			<section className="bg-stone py-16 md:py-24 px-6 md:px-12">
-				<div className="max-w-4xl mx-auto text-center">
+				<div className="max-w-7xl mx-auto text-center">
 					<Eyebrow className="mb-3">Get involved</Eyebrow>
 					<h2 className="font-display font-bold uppercase tracking-[0.02em] text-[28px] md:text-[36px] mb-6">
 						Serve With Us

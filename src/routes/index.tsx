@@ -77,22 +77,24 @@ function HomePage() {
 					backgroundSize: "cover",
 				}}
 			>
-				<div className="max-w-4xl hero-stagger">
-					{/* One line at every viewport: nowrap + viewport-scaled clamp, sized
-					    so it clears the section padding at 360px wide. */}
-					<h1 className="text-white font-display font-extrabold uppercase tracking-[0.02em] whitespace-nowrap text-[clamp(1.625rem,7.3vw,4.5rem)] leading-[1.05] mb-3">
-						Christians <span className="font-light">in</span> Tech
-					</h1>
-					<p className="text-white font-medium text-[clamp(1.125rem,2.5vw,1.75rem)] leading-[1.7] mb-8">
-						A community at the intersection of faith and technology.
-					</p>
-					<CtaLink
-						href="https://www.meetup.com/citcbus/"
-						theme="solid"
-						size="lg"
-					>
-						Upcoming Events
-					</CtaLink>
+				<div className="max-w-7xl mx-auto w-full">
+					<div className="max-w-4xl hero-stagger">
+						{/* One line at every viewport: nowrap + viewport-scaled clamp, sized
+						    so it clears the section padding at 360px wide. */}
+						<h1 className="text-white font-display font-extrabold uppercase tracking-[0.02em] whitespace-nowrap text-[clamp(1.625rem,7.3vw,4.5rem)] leading-[1.05] mb-3">
+							Christians <span className="font-light">in</span> Tech
+						</h1>
+						<p className="text-white font-medium text-[clamp(1.125rem,2.5vw,1.75rem)] leading-[1.7] mb-8">
+							A community at the intersection of faith and technology.
+						</p>
+						<CtaLink
+							href="https://www.meetup.com/citcbus/"
+							theme="solid"
+							size="lg"
+						>
+							Upcoming Events
+						</CtaLink>
+					</div>
 				</div>
 			</section>
 
@@ -132,44 +134,46 @@ function HomePage() {
 			{/* biome-ignore lint/correctness/useUniqueElementIds: static anchor for hash navigation */}
 			<section
 				id="get-involved"
-				className="bg-stone w-full py-16 md:py-24 px-4"
+				className="bg-stone w-full py-16 md:py-24 px-6 md:px-12"
 			>
-				<div className="text-center mb-16">
-					<Eyebrow className="mb-3">Find your place</Eyebrow>
-					<h2 className={sectionHeading}>Get Involved</h2>
-				</div>
-				<div className="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
-					{involvement.map((item) => (
-						<div
-							key={item.title}
-							className="flex flex-col items-center text-center h-full"
-						>
-							{item.icon}
-							<h3 className="font-display font-bold uppercase tracking-[0.02em] text-[20px] md:text-[24px] mb-4">
-								{item.title}
-							</h3>
-							<p className="mb-10 text-base md:text-lg leading-[1.7] flex-grow max-w-md">
-								{item.body}
-							</p>
-							{"to" in item.cta && item.cta.to ? (
-								<CtaLink
-									to={item.cta.to}
-									theme="dark"
-									className="w-full max-w-[400px]"
-								>
-									{item.cta.label}
-								</CtaLink>
-							) : (
-								<CtaLink
-									href={item.cta.href}
-									theme="dark"
-									className="w-full max-w-[400px]"
-								>
-									{item.cta.label}
-								</CtaLink>
-							)}
-						</div>
-					))}
+				<div className="max-w-7xl mx-auto">
+					<div className="text-center mb-16">
+						<Eyebrow className="mb-3">Find your place</Eyebrow>
+						<h2 className={sectionHeading}>Get Involved</h2>
+					</div>
+					<div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+						{involvement.map((item) => (
+							<div
+								key={item.title}
+								className="flex flex-col items-center text-center h-full"
+							>
+								{item.icon}
+								<h3 className="font-display font-bold uppercase tracking-[0.02em] text-[20px] md:text-[24px] mb-4">
+									{item.title}
+								</h3>
+								<p className="mb-10 text-base md:text-lg leading-[1.7] flex-grow max-w-md">
+									{item.body}
+								</p>
+								{"to" in item.cta && item.cta.to ? (
+									<CtaLink
+										to={item.cta.to}
+										theme="dark"
+										className="w-full max-w-[400px]"
+									>
+										{item.cta.label}
+									</CtaLink>
+								) : (
+									<CtaLink
+										href={item.cta.href}
+										theme="dark"
+										className="w-full max-w-[400px]"
+									>
+										{item.cta.label}
+									</CtaLink>
+								)}
+							</div>
+						))}
+					</div>
 				</div>
 			</section>
 
@@ -179,30 +183,32 @@ function HomePage() {
 				id="sponsors-partners"
 				className="bg-paper w-full py-16 md:py-24 px-6 md:px-12"
 			>
-				<div className="text-center mb-16">
-					<Eyebrow className="mb-3">Thank you</Eyebrow>
-					<h2 className={sectionHeading}>Sponsors & Partners</h2>
-				</div>
-				<div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-					{sponsors.map((sponsor) => (
-						<a
-							key={sponsor.name}
-							href={sponsor.href}
-							target="_blank"
-							rel="noopener noreferrer"
-							className="group flex flex-col items-center justify-center gap-4 p-12 border border-gray-100 bg-paper hover:border-gray-200 hover:shadow-sm transition-all duration-300 h-64 md:h-72"
-						>
-							<img
-								src={sponsor.image}
-								alt={`${sponsor.name} logo`}
-								className="w-full h-full object-contain"
-								loading="lazy"
-							/>
-							<span className="text-xs uppercase tracking-[0.25em] text-mist">
-								{sponsor.role}
-							</span>
-						</a>
-					))}
+				<div className="max-w-7xl mx-auto">
+					<div className="text-center mb-16">
+						<Eyebrow className="mb-3">Thank you</Eyebrow>
+						<h2 className={sectionHeading}>Sponsors & Partners</h2>
+					</div>
+					<div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+						{sponsors.map((sponsor) => (
+							<a
+								key={sponsor.name}
+								href={sponsor.href}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="group flex flex-col items-center justify-center gap-4 p-12 border border-gray-100 bg-paper hover:border-gray-200 hover:shadow-sm transition-all duration-300 h-64 md:h-72"
+							>
+								<img
+									src={sponsor.image}
+									alt={`${sponsor.name} logo`}
+									className="w-full h-full object-contain"
+									loading="lazy"
+								/>
+								<span className="text-xs uppercase tracking-[0.25em] text-mist">
+									{sponsor.role}
+								</span>
+							</a>
+						))}
+					</div>
 				</div>
 			</section>
 		</>
