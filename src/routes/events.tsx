@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import Container from "../components/Container";
 import CtaLink from "../components/CtaLink";
 import Eyebrow from "../components/Eyebrow";
 import eventsData from "../data/events.json";
@@ -18,8 +19,8 @@ function EventsPage() {
 		.sort((a, b) => a.date.getTime() - b.date.getTime());
 
 	return (
-		<section className="bg-paper py-16 md:py-24 px-6 md:px-12">
-			<div className="max-w-5xl mx-auto">
+		<section className="bg-paper py-16 md:py-24">
+			<Container>
 				<Eyebrow className="mb-3">Bi-weekly in Columbus</Eyebrow>
 				<h1 className="font-display font-bold uppercase tracking-[0.02em] text-[36px] md:text-[56px] leading-[1.1] mb-6">
 					Events
@@ -91,7 +92,7 @@ function EventsPage() {
 					})}
 					.
 				</p>
-			</div>
+			</Container>
 		</section>
 	);
 }
