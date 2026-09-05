@@ -1,5 +1,5 @@
 {
-	"updatedAt": "2026-08-24T09:50:09.357Z",
+	"updatedAt": "2026-09-05T12:28:10.874Z",
 	"source": "https://www.meetup.com/citcbus/events/",
 	"events": [
 		{
@@ -7,6 +7,13 @@
 			"name": "Christians in Tech - Meetup #43 @ Improving",
 			"url": "https://www.meetup.com/citcbus/events/316232669/",
 			"dateTime": "2026-09-05T13:00:00-04:00",
+			"venue": ""
+		},
+		{
+			"id": "316430028",
+			"name": "Christians in Tech - Meetup #44 @ Improving",
+			"url": "https://www.meetup.com/citcbus/events/316430028/",
+			"dateTime": "2026-09-19T13:00:00-04:00",
 			"venue": ""
 		}
 	]
